@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaMan.API", "PizzaMan.API\PizzaMan.API.csproj", "{9BB89779-0FA1-484C-8E45-B9F237E9B839}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaMan.Core", "PizzaMan.Core\PizzaMan.Core.csproj", "{195DFA22-6EBC-4879-BD10-2EC9A7AC8631}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PizzaMan.Web", "..\PizzaMan.Web\", "{62592C76-73BE-48E3-B765-E2CCD3E8B425}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_49923"
+		Debug.AspNetCompiler.PhysicalPath = "..\PizzaMan.Web\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_49923\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_49923"
+		Release.AspNetCompiler.PhysicalPath = "..\PizzaMan.Web\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_49923\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "49923"
+		SlnRelativePath = "..\PizzaMan.Web\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9BB89779-0FA1-484C-8E45-B9F237E9B839}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BB89779-0FA1-484C-8E45-B9F237E9B839}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BB89779-0FA1-484C-8E45-B9F237E9B839}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BB89779-0FA1-484C-8E45-B9F237E9B839}.Release|Any CPU.Build.0 = Release|Any CPU
+		{195DFA22-6EBC-4879-BD10-2EC9A7AC8631}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{195DFA22-6EBC-4879-BD10-2EC9A7AC8631}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{195DFA22-6EBC-4879-BD10-2EC9A7AC8631}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{195DFA22-6EBC-4879-BD10-2EC9A7AC8631}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62592C76-73BE-48E3-B765-E2CCD3E8B425}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62592C76-73BE-48E3-B765-E2CCD3E8B425}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62592C76-73BE-48E3-B765-E2CCD3E8B425}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{62592C76-73BE-48E3-B765-E2CCD3E8B425}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
