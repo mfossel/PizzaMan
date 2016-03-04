@@ -3,3 +3,19 @@
     background-repeat: no-repeat;
     background-size:cover;
 }
+
+#mainNav {
+    background-color: black;
+    opacity: .7;
+}
+
+#navContainer {
+    padding-top:15px;
+    opacity: 1;
+}
+
+.navp {
+    color:white;
+    text-shadow: 2px 2px 5px #ffffff;
+    opacity: 1;
+}
