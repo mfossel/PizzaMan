@@ -8,5 +8,6 @@ namespace PizzaMan.Core.Domain
 {
     class City
     {
+
     }
 }

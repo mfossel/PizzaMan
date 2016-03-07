@@ -8,5 +8,9 @@ namespace PizzaMan.Core.Domain
 {
     class UserRole
     {
+
+
+
+
     }
 }
