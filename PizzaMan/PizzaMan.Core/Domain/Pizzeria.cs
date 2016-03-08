@@ -23,8 +23,5 @@ namespace PizzaMan.Core.Domain
         public bool VeganOption { get; set; }
 
 
-       
-
-
     }
 }

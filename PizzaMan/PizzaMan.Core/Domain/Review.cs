@@ -17,6 +17,7 @@ namespace PizzaMan.Core.Domain
             Superb = 5
         }
 
+        public int ReviewId { get; set; }
         public Rating Crust { get; set; }
         public Rating Cheese { get; set; }
         public Rating Toppings { get; set; }

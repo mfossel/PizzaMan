@@ -9,8 +9,5 @@ namespace PizzaMan.Core.Domain
     class User
     {
 
-
-
-
     }
 }
