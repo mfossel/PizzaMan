@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace PizzaMan.Core.Domain
 {
-    class Pizzeria
+    public class Pizzeria
     {
         public int PizzeriaId { get; set; }
+        public int NeighborhoodId { get; set; }
+        public int YearOpened { get; set; }
         public string Type { get; set; }
         public string Style { get; set; }
+        public string Description { get; set; }
         public bool Delivery { get; set; }
         public bool Takeout { get; set; }
         public bool Sitdown { get; set; }
@@ -21,7 +24,6 @@ namespace PizzaMan.Core.Domain
         public string OvenType { get; set; }
         public bool GlutenFreeOption { get; set; }
         public bool VeganOption { get; set; }
-
 
     }
 }

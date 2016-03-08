@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PizzaMan.Core.Domain
 {
-    class UserRole
+    public class UserRole
     {
 
 

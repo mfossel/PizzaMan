@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PizzaMan.Core.Domain
 {
-    class Review
+    public class Review
     {
         public enum Rating
         {
@@ -18,6 +18,7 @@ namespace PizzaMan.Core.Domain
         }
 
         public int ReviewId { get; set; }
+        public int PizzeriaId { get; set; }
         public Rating Crust { get; set; }
         public Rating Cheese { get; set; }
         public Rating Toppings { get; set; }
