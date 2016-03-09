@@ -12,7 +12,7 @@ namespace PizzaMan.Core.Domain
         public string CityName { get; set; }
         public string State { get; set; }
         
-        public ICollection<Neighborhood> Nieghborhoods { get; set; }
+        public ICollection<Neighborhood> Neighborhoods { get; set; }
 
     }
 }

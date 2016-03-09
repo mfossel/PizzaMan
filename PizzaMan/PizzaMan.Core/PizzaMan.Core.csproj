@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="Domain\City.cs" />
     <Compile Include="Domain\Neighborhood.cs" />
+    <Compile Include="Domain\Photo.cs" />
     <Compile Include="Domain\Pizzeria.cs" />
     <Compile Include="Domain\Review.cs" />
     <Compile Include="Domain\User.cs" />

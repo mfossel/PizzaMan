@@ -15,5 +15,8 @@ namespace PizzaMan.Core.Domain
 
         public string PasswordHash { get; set; }
         public string SecurityStamp { get; set; }
+
+        public ICollection<Photo> Photos { get; set; }
+        public ICollection<Review> Reviews { get; set; }
     }
 }

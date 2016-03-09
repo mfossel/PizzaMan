@@ -27,5 +27,6 @@ namespace PizzaMan.Core.Domain
 
         public virtual Neighborhood Neighborhood { get; set; }
         public ICollection<Review> Reviews { get; set; }
+        public ICollection<Photo> Photos { get; set; }
     }
 }
