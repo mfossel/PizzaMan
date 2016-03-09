@@ -13,6 +13,8 @@ namespace PizzaMan.Core.Domain
         public string NeighborhoodName { get; set; }
         public int ZipCode { get; set; }
 
+        public virtual City City { get; set; }
+        public ICollection<Pizzeria> Pizzerias { get; set; }
 
     }
 }

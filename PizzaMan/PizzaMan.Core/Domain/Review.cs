@@ -27,6 +27,8 @@ namespace PizzaMan.Core.Domain
         public Rating? Drinks { get; set; }
         public Rating OverallExperience { get; set; }
 
+        public Pizzeria Pizzeria { get; set; }
+        public User User { get; set; }
 
 
 

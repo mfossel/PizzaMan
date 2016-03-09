@@ -1,0 +1,5 @@
+C:\dev\origin\PizzaMan\PizzaMan\PizzaMan.DATA\bin\Debug\PizzaMan.DATA.dll
+C:\dev\origin\PizzaMan\PizzaMan\PizzaMan.DATA\bin\Debug\PizzaMan.DATA.pdb
+C:\dev\origin\PizzaMan\PizzaMan\PizzaMan.DATA\obj\Debug\PizzaMan.Data.csprojResolveAssemblyReference.cache
+C:\dev\origin\PizzaMan\PizzaMan\PizzaMan.DATA\obj\Debug\PizzaMan.DATA.dll
+C:\dev\origin\PizzaMan\PizzaMan\PizzaMan.DATA\obj\Debug\PizzaMan.DATA.pdb

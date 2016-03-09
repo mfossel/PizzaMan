@@ -25,5 +25,7 @@ namespace PizzaMan.Core.Domain
         public bool GlutenFreeOption { get; set; }
         public bool VeganOption { get; set; }
 
+        public virtual Neighborhood Neighborhood { get; set; }
+        public ICollection<Review> Reviews { get; set; }
     }
 }
