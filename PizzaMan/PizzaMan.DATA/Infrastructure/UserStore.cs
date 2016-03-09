@@ -1,7 +1,9 @@
-﻿using PizzaMan.Core.Domain;
+﻿using Microsoft.AspNet.Identity;
+using PizzaMan.Core.Domain;
 using PizzaMan.Core.Infrastructure;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,13 +12,12 @@ namespace PizzaMan.DATA.Infrastructure
 {
     public class UserStore : Disposable,
                             IUserPasswordStore<User, string>,
-                            IUserSecurityStampStore<User, string>,
-                            IUserRoleStore<User, string>
+                            IUserSecurityStampStore<User, string>
     {
         private readonly IDatabaseFactory _databaseFactory;
 
-        private WingmanDataContext _dataContext;
-        protected WingmanDataContext DataContext
+        private PizzaManDataContext _dataContext;
+        protected PizzaManDataContext DataContext
         {
             get
             {
@@ -35,32 +36,35 @@ namespace PizzaMan.DATA.Infrastructure
             if (user == null)
                 throw new ArgumentNullException(nameof(user));
 
-            return Task.Factory.StartNew(() => {
+            return Task.Factory.StartNew(() =>
+            {
                 user.Id = Guid.NewGuid().ToString();
                 DataContext.Users.Add(user);
                 DataContext.SaveChanges();
             });
         }
 
-        public Task DeleteAsync(WingmanUser user)
+        public Task DeleteAsync(User user)
         {
             if (user == null)
                 throw new ArgumentNullException(nameof(user));
 
-            return Task.Factory.StartNew(() => {
+            return Task.Factory.StartNew(() =>
+            {
                 DataContext.Users.Remove(user);
                 DataContext.SaveChanges();
             });
         }
 
-        public Task<WingmanUser> FindByIdAsync(string userId)
+        public Task<User> FindByIdAsync(string userId)
         {
-            return Task.Factory.StartNew(() => {
+            return Task.Factory.StartNew(() =>
+            {
                 return DataContext.Users.FirstOrDefault(u => u.Id == userId);
             });
         }
 
-        public Task<WingmanUser> FindByNameAsync(string userName)
+        public Task<User> FindByNameAsync(string userName)
         {
             return Task.Factory.StartNew(() =>
             {
@@ -68,7 +72,7 @@ namespace PizzaMan.DATA.Infrastructure
             });
         }
 
-        public Task<string> GetPasswordHashAsync(WingmanUser user)
+        public Task<string> GetPasswordHashAsync(User user)
         {
             if (user == null)
                 throw new ArgumentNullException(nameof(user));
@@ -79,12 +83,12 @@ namespace PizzaMan.DATA.Infrastructure
             });
         }
 
-        public Task<bool> HasPasswordAsync(WingmanUser user)
+        public Task<bool> HasPasswordAsync(User user)
         {
             return Task.FromResult(!string.IsNullOrEmpty(user.PasswordHash));
         }
 
-        public Task SetPasswordHashAsync(WingmanUser user, string passwordHash)
+        public Task SetPasswordHashAsync(User user, string passwordHash)
         {
             if (user == null)
                 throw new ArgumentNullException(nameof(user));
@@ -94,7 +98,7 @@ namespace PizzaMan.DATA.Infrastructure
             return Task.FromResult(0);
         }
 
-        public Task UpdateAsync(WingmanUser user)
+        public Task UpdateAsync(User user)
         {
             if (user == null)
                 throw new ArgumentNullException(nameof(user));
@@ -110,7 +114,7 @@ namespace PizzaMan.DATA.Infrastructure
         #endregion
 
         #region ISecurityStampStore
-        public Task<string> GetSecurityStampAsync(WingmanUser user)
+        public Task<string> GetSecurityStampAsync(User user)
         {
             if (user == null)
                 throw new ArgumentNullException(nameof(user));
@@ -118,7 +122,7 @@ namespace PizzaMan.DATA.Infrastructure
             return Task.FromResult(user.SecurityStamp);
         }
 
-        public Task SetSecurityStampAsync(WingmanUser user, string stamp)
+        public Task SetSecurityStampAsync(User user, string stamp)
         {
             if (user == null)
                 throw new ArgumentNullException(nameof(user));
@@ -129,82 +133,5 @@ namespace PizzaMan.DATA.Infrastructure
         }
         #endregion
 
-        #region IUserRoleStore
-        public Task AddToRoleAsync(WingmanUser user, string roleName)
-        {
-            if (user == null)
-            {
-                throw new ArgumentNullException(nameof(user));
-            }
-
-            if (string.IsNullOrEmpty(roleName))
-            {
-                throw new ArgumentException("Argument cannot be null or empty: roleName.");
-            }
-
-            return Task.Factory.StartNew(() =>
-            {
-                if (!DataContext.Roles.Any(r => r.Name == roleName))
-                {
-                    DataContext.Roles.Add(new Role
-                    {
-                        Id = Guid.NewGuid().ToString(),
-                        Name = roleName
-                    });
-                }
-
-                DataContext.UserRoles.Add(new UserRole
-                {
-                    Role = DataContext.Roles.FirstOrDefault(r => r.Name == roleName),
-                    User = user
-                });
-
-                DataContext.SaveChanges();
-            });
-        }
-
-        public Task RemoveFromRoleAsync(WingmanUser user, string roleName)
-        {
-            if (user == null)
-            {
-                throw new ArgumentNullException(nameof(user));
-            }
-
-            if (string.IsNullOrEmpty(roleName))
-            {
-                throw new ArgumentException("Argument cannot be null or empty: roleName.");
-            }
-
-            return Task.Factory.StartNew(() =>
-            {
-                var userRole = user.Roles.FirstOrDefault(r => r.Role.Name == roleName);
-
-                if (userRole == null)
-                {
-                    throw new InvalidOperationException("User does not have that role");
-                }
-
-                DataContext.UserRoles.Remove(userRole);
-
-                DataContext.SaveChanges();
-            });
-        }
-
-        public Task<IList<string>> GetRolesAsync(WingmanUser user)
-        {
-            return Task.Factory.StartNew(() =>
-            {
-                return (IList<string>)user.Roles.Select(ur => ur.Role.Name);
-            });
-        }
-
-        public Task<bool> IsInRoleAsync(WingmanUser user, string roleName)
-        {
-            return Task.Factory.StartNew(() =>
-            {
-                return user.Roles.Any(r => r.Role.Name == roleName);
-            });
-        }
-        #endregion
     }
 }

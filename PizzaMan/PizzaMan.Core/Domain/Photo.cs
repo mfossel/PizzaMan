@@ -8,7 +8,8 @@ namespace PizzaMan.Core.Domain
 {
     public class Photo
     {
-        public int PhotoId { get; set}
+        public int PhotoId { get; set; }
+        public string UserId { get; set; }
         public int PizzeriaId { get; set; }
         public string PhotoURL { get; set; }
         public int NumberOfLikes { get; set; }

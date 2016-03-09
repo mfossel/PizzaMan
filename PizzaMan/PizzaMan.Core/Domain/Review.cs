@@ -19,6 +19,7 @@ namespace PizzaMan.Core.Domain
 
         public int ReviewId { get; set; }
         public int PizzeriaId { get; set; }
+        public string UserId { get; set; }
         public Rating Crust { get; set; }
         public Rating Cheese { get; set; }
         public Rating Toppings { get; set; }

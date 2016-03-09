@@ -52,3 +52,7 @@ C:\dev\origin\PizzaMan\PizzaMan\PizzaMan.API\bin\System.Web.Http.WebHost.xml
 C:\dev\origin\PizzaMan\PizzaMan\PizzaMan.API\bin\Microsoft.AspNet.Identity.Core.xml
 C:\dev\origin\PizzaMan\PizzaMan\PizzaMan.API\obj\Debug\PizzaMan.API.dll
 C:\dev\origin\PizzaMan\PizzaMan\PizzaMan.API\obj\Debug\PizzaMan.API.pdb
+C:\dev\origin\PizzaMan\PizzaMan\PizzaMan.API\bin\EntityFramework.dll
+C:\dev\origin\PizzaMan\PizzaMan\PizzaMan.API\bin\EntityFramework.SqlServer.dll
+C:\dev\origin\PizzaMan\PizzaMan\PizzaMan.API\bin\EntityFramework.xml
+C:\dev\origin\PizzaMan\PizzaMan\PizzaMan.API\bin\EntityFramework.SqlServer.xml

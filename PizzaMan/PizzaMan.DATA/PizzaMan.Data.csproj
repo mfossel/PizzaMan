@@ -38,6 +38,10 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -54,7 +58,13 @@
     <Compile Include="Infrastructure\IDatabaseFactory.cs" />
     <Compile Include="Infrastructure\PizzaManDataContext.cs" />
     <Compile Include="Infrastructure\Repository.cs" />
+    <Compile Include="Infrastructure\UnitOfWork.cs" />
     <Compile Include="Infrastructure\UserStore.cs" />
+    <Compile Include="Migrations\201603092347247_intitial.cs" />
+    <Compile Include="Migrations\201603092347247_intitial.Designer.cs">
+      <DependentUpon>201603092347247_intitial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -69,6 +79,11 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201603092347247_intitial.resx">
+      <DependentUpon>201603092347247_intitial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

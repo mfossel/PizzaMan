@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PizzaMan.DATA.Infrastructure
 {
-    public class PizzaManContext : DbContext
+    public class PizzaManDataContext : DbContext
     {
         public PizzaManDataContext() : base("PizzaMan")
         {
@@ -32,8 +32,7 @@ namespace PizzaMan.DATA.Infrastructure
             modelBuilder.Entity<City>()
                         .HasMany(c => c.Neighborhoods)
                         .WithRequired(n => n.City)
-                        .HasForeignKey(n => n.CityId)
-                        .WillCascadeOnDelete(false);
+                        .HasForeignKey(n => n.CityId);
 
             //Neighborhood
             modelBuilder.Entity<Neighborhood>()
@@ -63,7 +62,7 @@ namespace PizzaMan.DATA.Infrastructure
                          .WithRequired(ph => ph.User)
                          .HasForeignKey(ph => ph.UserId);
 
-
+ 
 
             base.OnModelCreating(modelBuilder);
         }

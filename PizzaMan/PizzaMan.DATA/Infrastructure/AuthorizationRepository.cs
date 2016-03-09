@@ -1,4 +1,6 @@
-﻿using PizzaMan.Core.Domain;
+﻿using Microsoft.AspNet.Identity;
+using PizzaMan.Core.Domain;
+using PizzaMan.Core.Infrastructure;
 using PizzaMan.Core.Models;
 using System;
 using System.Collections.Generic;
@@ -26,10 +28,10 @@ namespace PizzaMan.DATA.Infrastructure
 
         public async Task<IdentityResult> RegisterUser(RegistrationModel model)
         {
-            var user = new User;
+            var user = new User
             {
                 UserName = model.Username,
-                Email = model.EmailAddress,
+                EmailAddress = model.EmailAddress,
                
             };
 
