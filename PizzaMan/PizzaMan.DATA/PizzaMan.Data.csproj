@@ -66,10 +66,14 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\CityRepository.cs" />
+    <Compile Include="Repository\NeighborhoodRepository.cs" />
+    <Compile Include="Repository\PhotoRepository.cs" />
+    <Compile Include="Repository\PizzeriaRepository.cs" />
+    <Compile Include="Repository\ReviewRepository.cs" />
+    <Compile Include="Repository\UserRepository.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Repository\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\PizzaMan.Core\PizzaMan.Core.csproj">
       <Project>{195dfa22-6ebc-4879-bd10-2ec9a7ac8631}</Project>

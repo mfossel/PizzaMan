@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PizzaMan.Core.Models
 {
-    class NeighborhoodModel
+    public class NeighborhoodModel
     {
         public int NeighborhoodId { get; set; }
         public int CityId { get; set; }

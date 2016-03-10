@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PizzaMan.Core.Models
 {
-    class UserModel
+    public class UserModel
     {
         public string Id { get; set; }
         public string EmailAddress { get; set; }

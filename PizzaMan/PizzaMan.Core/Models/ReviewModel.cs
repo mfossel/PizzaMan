@@ -7,7 +7,7 @@ using PizzaMan.Core.Domain;
 
 namespace PizzaMan.Core.Models
 {
-    class ReviewModel
+    public class ReviewModel
     {
         public int ReviewId { get; set; }
         public int PizzeriaId { get; set; }
