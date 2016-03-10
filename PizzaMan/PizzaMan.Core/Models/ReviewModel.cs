@@ -11,12 +11,13 @@ namespace PizzaMan.Core.Models
     {
         public int ReviewId { get; set; }
         public int PizzeriaId { get; set; }
-        public Review.Rating Crust { get; set; }
-        public Review.Rating Cheese { get; set; }
-        public Review.Rating Toppings { get; set; }
-        public Review.Rating CustomerService { get; set; }
-        public Review.Rating? OtherFoodItems { get; set; }
-        public Review.Rating? Drinks { get; set; }
-        public Review.Rating OverallExperience { get; set; }
+        public string UserId { get; set; }
+        public Rating Crust { get; set; }
+        public Rating Cheese { get; set; }
+        public Rating Toppings { get; set; }
+        public Rating CustomerService { get; set; }
+        public Rating? OtherFoodItems { get; set; }
+        public Rating? Drinks { get; set; }
+        public Rating OverallExperience { get; set; }
     }
 }

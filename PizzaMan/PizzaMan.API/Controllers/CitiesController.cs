@@ -41,18 +41,18 @@ namespace PizzaMan.API.Controllers
         [ResponseType(typeof(City))]
         public IHttpActionResult GetCity(int id)
         {
-            City city = db.Cities.Find(id);
+            City city = _cityRepository.GetById(id);
             if (city == null)
             {
                 return NotFound();
             }
 
-            return Ok(city);
+            return Ok(Mapper.Map<CityModel>(city));
         }
 
         // PUT: api/Cities/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutCity(int id, City city)
+        public IHttpActionResult PutCity(int id, CityModel city)
         {
             if (!ModelState.IsValid)
             {
@@ -64,7 +64,10 @@ namespace PizzaMan.API.Controllers
                 return BadRequest();
             }
 
-            db.Entry(city).State = EntityState.Modified;
+            var dbCity = _cityRepository.GetById(id);
+            dbCity.Update
+
+
 
             try
             {

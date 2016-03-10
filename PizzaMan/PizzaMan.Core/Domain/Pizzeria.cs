@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PizzaMan.Core.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,5 +29,32 @@ namespace PizzaMan.Core.Domain
         public virtual Neighborhood Neighborhood { get; set; }
         public ICollection<Review> Reviews { get; set; }
         public ICollection<Photo> Photos { get; set; }
+
+        public Pizzeria() { }
+
+        public Pizzeria(PizzeriaModel model)
+        {
+            this.Update(model);
+        }
+
+        public void Update(PizzeriaModel model)
+        {
+            PizzeriaId = model.PizzeriaId;
+            NeighborhoodId = model.NeighborhoodId;
+            YearOpened = model.YearOpened;
+            Type = model.Type;
+            Style = model.Style;
+            Description = model.Description;
+            Delivery = model.Delivery;
+            Takeout = model.Takeout;
+            Sitdown = model.Sitdown;
+            Alcohol = model.Alcohol;
+            PhoneNumber = model.PhoneNumber;
+            DrinkSelection = model.DrinkSelection;
+            MenuURL = model.MenuURL;
+            OvenType = model.OvenType;
+            GlutenFreeOption = model.GlutenFreeOption;
+            VeganOption = model.VeganOption;
+        }
     }
 }

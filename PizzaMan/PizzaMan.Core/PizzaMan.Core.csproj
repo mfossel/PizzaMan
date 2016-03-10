@@ -69,6 +69,7 @@
     <Compile Include="Infrastructure\IUnitOfWork.cs" />
     <Compile Include="Models\CityModel.cs" />
     <Compile Include="Models\NeighborhoodModel.cs" />
+    <Compile Include="Models\PhotoModel.cs" />
     <Compile Include="Models\PizzeriaModel.cs" />
     <Compile Include="Models\RegistrationModel.cs" />
     <Compile Include="Models\ReviewModel.cs" />

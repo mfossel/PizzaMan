@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.Identity;
+using PizzaMan.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,5 +19,21 @@ namespace PizzaMan.Core.Domain
 
         public ICollection<Photo> Photos { get; set; }
         public ICollection<Review> Reviews { get; set; }
+
+        public User() { }
+
+        public User(UserModel model)
+        {
+            this.Update(model);
+        }
+
+        public void Update(UserModel model)
+        {
+            Id = model.Id;
+            EmailAddress = model.EmailAddress;
+            UserName = model.UserName;
+            PasswordHash = model.PasswordHash;
+            SecurityStamp = model.SecurityStamp;
+        }
     }
 }
