@@ -20,12 +20,12 @@ namespace PizzaMan.API.Controllers
 {
 
     [Authorize]
-    public class CitiesController : ApiController
+    public class CitiesController : BaseApiController
     {
         private readonly ICityRepository _cityRepository;
         private readonly IUnitOfWork _unitOfWork;
 
-        public CitiesController(ICityRepository cityRepository, IUnitOfWork unitOfWork)
+        public CitiesController(ICityRepository cityRepository, IUnitOfWork unitOfWork, IUserRepository userRepository) : base(userRepository)
         {
             _cityRepository = cityRepository;
             _unitOfWork = unitOfWork;
@@ -65,13 +65,14 @@ namespace PizzaMan.API.Controllers
             }
 
             var dbCity = _cityRepository.GetById(id);
-            dbCity.Update
+            dbCity.Update(city);
+            _cityRepository.Update(dbCity);
 
 
 
             try
             {
-                db.SaveChanges();
+                _unitOfWork.Commit();
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -90,15 +91,17 @@ namespace PizzaMan.API.Controllers
 
         // POST: api/Cities
         [ResponseType(typeof(City))]
-        public IHttpActionResult PostCity(City city)
+        public IHttpActionResult PostCity(CityModel city)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.Cities.Add(city);
-            db.SaveChanges();
+            var dbCity = new City(city);
+            _cityRepository.Add(dbCity);
+            _unitOfWork.Commit();
+            city.CityId = dbCity.CityId;
 
             return CreatedAtRoute("DefaultApi", new { id = city.CityId }, city);
         }
@@ -107,30 +110,23 @@ namespace PizzaMan.API.Controllers
         [ResponseType(typeof(City))]
         public IHttpActionResult DeleteCity(int id)
         {
-            City city = db.Cities.Find(id);
+            City city = _cityRepository.GetById(id);
+
             if (city == null)
             {
                 return NotFound();
             }
 
-            db.Cities.Remove(city);
-            db.SaveChanges();
+            _cityRepository.Delete(city);
+            _unitOfWork.Commit();
 
-            return Ok(city);
+            return Ok(Mapper.Map<CityModel>(city));
         }
 
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
-        }
 
         private bool CityExists(int id)
         {
-            return db.Cities.Count(e => e.CityId == id) > 0;
+            return _cityRepository.Any(e => e.CityId == id);
         }
     }
 }

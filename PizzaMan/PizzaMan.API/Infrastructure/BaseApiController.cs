@@ -10,18 +10,18 @@ namespace PizzaMan.API.Infrastructure
 {
     public class BaseApiController : ApiController
     {
-        protected readonly IUserRepository _wingmanUserRepository;
+        protected readonly IUserRepository _UserRepository;
 
-        public BaseApiController(IUserRepository wingmanUserRepository)
+        public BaseApiController(IUserRepository userRepository)
         {
-            _wingmanUserRepository = wingmanUserRepository;
+            _UserRepository = userRepository;
         }
 
         protected User CurrentUser
         {
             get
             {
-                return _wingmanUserRepository.GetFirstOrDefault(u => u.UserName == User.Identity.Name);
+                return _UserRepository.GetFirstOrDefault(u => u.UserName == User.Identity.Name);
             }
         }
     }

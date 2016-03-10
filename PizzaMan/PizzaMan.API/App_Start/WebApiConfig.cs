@@ -1,4 +1,7 @@
-﻿using System;
+﻿using AutoMapper;
+using PizzaMan.Core.Domain;
+using PizzaMan.Core.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
@@ -19,6 +22,20 @@ namespace PizzaMan.API
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+            var appXmlType = config.Formatters.XmlFormatter.SupportedMediaTypes.FirstOrDefault(t => t.MediaType == "application/xml");
+            config.Formatters.XmlFormatter.SupportedMediaTypes.Remove(appXmlType);
+
+            CreateMaps();
+        }
+        public static void CreateMaps()
+        {
+            Mapper.CreateMap<City, CityModel>();
+            Mapper.CreateMap<Neighborhood, NeighborhoodModel>();
+            Mapper.CreateMap<Photo, PhotoModel>();
+            Mapper.CreateMap<User, UserModel.Profile>();
+            Mapper.CreateMap<Pizzeria, PizzeriaModel>();
+            Mapper.CreateMap<Review, ReviewModel>();
+            Mapper.CreateMap<User, UserModel>();
         }
     }
 }

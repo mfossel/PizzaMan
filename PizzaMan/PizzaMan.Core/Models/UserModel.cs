@@ -14,5 +14,11 @@ namespace PizzaMan.Core.Models
 
         public string PasswordHash { get; set; }
         public string SecurityStamp { get; set; }
+
+        public class Profile : UserModel
+        {
+           PizzeriaModel FavoritePizzeria { get; set; }
+
+        }
     }
 }
