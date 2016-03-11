@@ -73,3 +73,5 @@ C:\dev\origin\PizzaMan\PizzaMan\PizzaMan.API\bin\SimpleInjector.xml
 C:\dev\origin\PizzaMan\PizzaMan\PizzaMan.API\bin\SimpleInjector.Extensions.ExecutionContextScoping.xml
 C:\dev\origin\PizzaMan\PizzaMan\PizzaMan.API\bin\SimpleInjector.Integration.WebApi.xml
 C:\dev\origin\PizzaMan\PizzaMan\PizzaMan.API\bin\System.Web.Http.Owin.xml
+C:\dev\origin\PizzaMan\PizzaMan\PizzaMan.API\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\dev\origin\PizzaMan\PizzaMan\PizzaMan.API\bin\Microsoft.Owin.Host.SystemWeb.xml
