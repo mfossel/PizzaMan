@@ -1,4 +1,4 @@
-﻿angular.module('app').controller('HomeController', function ($scope) {
+﻿angular.module('app').controller('HomeController', function ($scope, AuthenticationService) {
    
 
 });
