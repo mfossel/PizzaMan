@@ -33,10 +33,13 @@
             }
         }).success(function (response) {
             localStorageService.set('token', {
-                token: response.access_token
+                token: response.access_token                
             });
 
             state.authorized = true;
+            
+           
+
 
             deferred.resolve(response);
         }).error(function (err, status) {

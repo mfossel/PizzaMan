@@ -26,7 +26,7 @@ C:\dev\PizzaMan\PizzaMan\PizzaMan.DATA\bin\Debug\EntityFramework.xml
 C:\dev\PizzaMan\PizzaMan\PizzaMan.DATA\bin\Debug\EntityFramework.SqlServer.xml
 C:\dev\PizzaMan\PizzaMan\PizzaMan.DATA\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 C:\dev\PizzaMan\PizzaMan\PizzaMan.DATA\obj\Debug\PizzaMan.Data.csprojResolveAssemblyReference.cache
-C:\dev\PizzaMan\PizzaMan\PizzaMan.DATA\obj\Debug\PizzaMan.DATA.Migrations.intitial.resources
-C:\dev\PizzaMan\PizzaMan\PizzaMan.DATA\obj\Debug\PizzaMan.Data.csproj.GenerateResource.Cache
 C:\dev\PizzaMan\PizzaMan\PizzaMan.DATA\obj\Debug\PizzaMan.DATA.dll
 C:\dev\PizzaMan\PizzaMan\PizzaMan.DATA\obj\Debug\PizzaMan.DATA.pdb
+C:\dev\PizzaMan\PizzaMan\PizzaMan.DATA\obj\Debug\PizzaMan.DATA.Migrations.initialpc.resources
+C:\dev\PizzaMan\PizzaMan\PizzaMan.DATA\obj\Debug\PizzaMan.Data.csproj.GenerateResource.Cache
