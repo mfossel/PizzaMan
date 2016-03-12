@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html ng-app="app">
 <head>
     <title>Pizza Man</title>
     <meta charset="utf-8" />
@@ -14,11 +14,17 @@
     <div ui-view></div>
 
     <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
 
     <script src="js/app.js"></script>
+
+    <script src="js/infrastructure/authentication.interceptor.js"></script>
+    <script src="js/infrastructure/authentication.service.js"></script>
 
 </body>
 </html>
