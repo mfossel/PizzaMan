@@ -1,22 +1,80 @@
 ﻿<link href="../../style/dashboard.css" rel="stylesheet" />
 
 <div class="container">
-
-
     <div class="col-xs-12">
         <div class="box">
             <div class="box-icon">
                 <span><img src="../../img/Pizza.png" /></span>
             </div>
             <div class="info">
-                <h4 class="text-center">Submit a pizzeria!</h4>
-                <form role="search">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Enter Zip Code">
-                    </div>
-                    <button type="submit" class="btn btn-default">Find a pizzeria</button>
-                </form>
+                <h4 class="text-center">Submit a new Pizzeria!</h4>
             </div>
         </div>
     </div>
-</div>
+
+
+
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="box">
+            <div class="form-group">
+                <label class="pull-left text-success">Pizzeria Name</label>
+                <input type="text" class="form-control" placeholder="Enter name of Pizzeria" ng-model="newPizzeria.PizzeriaName">
+            </div>
+
+            <div class="form-group">
+                <label class="pull-left text-success">Street Address</label>
+                <input type="text" class="form-control" placeholder="Enter street address" ng-model="newPizzeria.Address">
+            </div>
+
+            <div class="form-group">
+                <label class="pull-left text-success">City</label>
+                <input type="text" class="form-control" placeholder="Enter city" ng-model="newPizzeria.City">
+            </div>
+
+            <div class="form-group">
+                <label class="pull-left text-success">State</label>
+                <input type="text" class="form-control" placeholder="Enter state" ng-model="newPizzeria.State">
+            </div>
+
+            <div class="form-group">
+                <label class="pull-left text-success">Zip Code</label>
+                <input type="text" class="form-control" placeholder="Enter zip code" ng-model="newPizzeria.ZipCode">
+            </div>
+
+            <div class="form-group">
+                <label class="pull-left text-success">Year Opened</label>
+                <input type="text" class="form-control" placeholder="Enter year opened" ng-model="newPizzeria.YearOpened">
+            </div>
+
+            <div class="form-group">
+                <label class="pull-left text-success">Phone Number</label>
+                <input type="text" class="form-control" placeholder="Enter phone number" ng-model="newPizzeria.PhoneNumber">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="box">
+
+            <div class="form-group">
+                <label class="pull-left text-success">Style of pizza</label>
+                <input type="text" class="form-control" placeholder="Ex. New York, Chicago, American, Italian..." ng-model="newPizzeria.Style">
+            </div>
+
+
+
+            <div class="form-group">
+                <label class="pull-left text-success">Description</label>
+                <textarea id="inputTextMessage" class="form-control" placeholder="Enter a brief description of the pizzeria" ng-model="newPizzeria.Description"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="col-xs-12" style="margin-top:30px; margin-bottom:30px;">
+            <button class="btn-lg btn-success center-block">Submit Pizzeria</button>
+        </div>
+
+    </div>
+

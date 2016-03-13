@@ -18,7 +18,7 @@ using PizzaMan.API.Infrastructure;
 
 namespace PizzaMan.API.Controllers
 {
-    [Authorize]
+    
     public class PizzeriasController : BaseApiController
     {
         private readonly IPizzeriaRepository _pizzeriaRepository;
@@ -50,6 +50,7 @@ namespace PizzaMan.API.Controllers
         }
 
         // PUT: api/Pizzerias/5
+        [Authorize]
         [ResponseType(typeof(void))]
         public IHttpActionResult PutPizzeria(int id, PizzeriaModel pizzeria)
         {
@@ -87,6 +88,7 @@ namespace PizzaMan.API.Controllers
         }
 
         // POST: api/Pizzerias
+        [Authorize]
         [ResponseType(typeof(Pizzeria))]
         public IHttpActionResult PostPizzeria(PizzeriaModel pizzeria)
         {
@@ -105,6 +107,7 @@ namespace PizzaMan.API.Controllers
         }
 
         // DELETE: api/Pizzerias/5
+        [Authorize]
         [ResponseType(typeof(Pizzeria))]
         public IHttpActionResult DeletePizzeria(int id)
         {

@@ -11,12 +11,12 @@ namespace PizzaMan.Core.Domain
     {
         public int PizzeriaId { get; set; }
         public int NeighborhoodId { get; set; }
+        public string PizzeriaName { get; set; }
         public int YearOpened { get; set; }
         public string Address { get; set; }
         public string City { get; set; }
         public string State { get; set; }
         public int ZipCode { get; set; }
-        public string Type { get; set; }
         public string Style { get; set; }
         public string Description { get; set; }
         public bool Delivery { get; set; }
@@ -24,7 +24,6 @@ namespace PizzaMan.Core.Domain
         public bool Sitdown { get; set; }
         public bool Alcohol { get; set; }
         public string PhoneNumber { get; set; }
-        public string DrinkSelection { get; set; }
         public string MenuURL { get; set; }
         public string OvenType { get; set; }
         public bool GlutenFreeOption { get; set; }
@@ -46,7 +45,6 @@ namespace PizzaMan.Core.Domain
             PizzeriaId = model.PizzeriaId;
             NeighborhoodId = model.NeighborhoodId;
             YearOpened = model.YearOpened;
-            Type = model.Type;
             Style = model.Style;
             Description = model.Description;
             Delivery = model.Delivery;
@@ -54,7 +52,6 @@ namespace PizzaMan.Core.Domain
             Sitdown = model.Sitdown;
             Alcohol = model.Alcohol;
             PhoneNumber = model.PhoneNumber;
-            DrinkSelection = model.DrinkSelection;
             MenuURL = model.MenuURL;
             OvenType = model.OvenType;
             GlutenFreeOption = model.GlutenFreeOption;
