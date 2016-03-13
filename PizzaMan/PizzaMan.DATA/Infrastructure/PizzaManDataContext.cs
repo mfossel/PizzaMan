@@ -16,8 +16,6 @@ namespace PizzaMan.DATA.Infrastructure
         }
 
         //SQL Tables
-        public IDbSet<City> Cities { get; set; }
-        public IDbSet<Neighborhood> Neighborhoods { get; set; }
         public IDbSet<Photo> Photos { get; set; }
         public IDbSet<Pizzeria> Pizzerias { get; set; }
         public IDbSet<Review> Reviews { get; set; }
@@ -27,18 +25,6 @@ namespace PizzaMan.DATA.Infrastructure
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
 
-
-            //City
-            modelBuilder.Entity<City>()
-                        .HasMany(c => c.Neighborhoods)
-                        .WithRequired(n => n.City)
-                        .HasForeignKey(n => n.CityId);
-
-            //Neighborhood
-            modelBuilder.Entity<Neighborhood>()
-                        .HasMany(n => n.Pizzerias)
-                        .WithRequired(p => p.Neighborhood)
-                        .HasForeignKey(p => p.NeighborhoodId);
 
             //Pizzeria
             modelBuilder.Entity<Pizzeria>()

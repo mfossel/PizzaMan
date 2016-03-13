@@ -11,8 +11,8 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider, $http
           .state('home.review', { url: '/review', parent: 'home', templateUrl: '/templates/review/review.html', controller: 'HomeController' })
           .state('home.login', { url: '/login', parent: 'home', templateUrl: '/templates/account/login.html', controller: 'AccountController' })
           .state('home.register', { url: '/register', parent: 'home', templateUrl: '/templates/account/register.html', controller: 'AccountController' })
-          .state('home.browse', { url: '/browse', parent: 'home', templateUrl: '/templates/browse/browse.html', controller: 'BrowseController' })
           .state('home.submit', { url: '/submit', parent: 'home', templateUrl: '/templates/submit/submit.html', controller: 'SubmitController' })
+          .state('home.find', { url: '/find', parent: 'home', templateUrl: '/templates/find/find.html', controller: 'FindController' })
           
     ;
 });

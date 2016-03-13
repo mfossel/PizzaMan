@@ -57,8 +57,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Domain\City.cs" />
-    <Compile Include="Domain\Neighborhood.cs" />
     <Compile Include="Domain\Photo.cs" />
     <Compile Include="Domain\Pizzeria.cs" />
     <Compile Include="Domain\Review.cs" />
@@ -67,16 +65,12 @@
     <Compile Include="Infrastructure\IAuthorizationRepository.cs" />
     <Compile Include="Infrastructure\IRepository.cs" />
     <Compile Include="Infrastructure\IUnitOfWork.cs" />
-    <Compile Include="Models\CityModel.cs" />
-    <Compile Include="Models\NeighborhoodModel.cs" />
     <Compile Include="Models\PhotoModel.cs" />
     <Compile Include="Models\PizzeriaModel.cs" />
     <Compile Include="Models\RegistrationModel.cs" />
     <Compile Include="Models\ReviewModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\ICityRepository.cs" />
-    <Compile Include="Repository\INeighborhoodRepository.cs" />
     <Compile Include="Repository\IPhotoRepository.cs" />
     <Compile Include="Repository\IPizzeriaRepository.cs" />
     <Compile Include="Repository\IReviewRepository.cs" />

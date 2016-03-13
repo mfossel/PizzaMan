@@ -65,8 +65,6 @@ namespace PizzaMan.Api
             container.Register<IDatabaseFactory, DatabaseFactory>(Lifestyle.Scoped);
             container.Register<IUnitOfWork, UnitOfWork>();
 
-            container.Register<ICityRepository, CityRepository>();
-            container.Register<INeighborhoodRepository, NeighborhoodRepository>();
             container.Register<IPhotoRepository, PhotoRepository>();
             container.Register<IPizzeriaRepository, PizzeriaRepository>();
             container.Register<IReviewRepository, ReviewRepository>();

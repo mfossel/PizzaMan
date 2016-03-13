@@ -184,8 +184,6 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountsController.cs" />
-    <Compile Include="Controllers\CitiesController.cs" />
-    <Compile Include="Controllers\NeighborhoodsController.cs" />
     <Compile Include="Controllers\PhotosController.cs" />
     <Compile Include="Controllers\PizzeriasController.cs" />
     <Compile Include="Controllers\ReviewsController.cs" />

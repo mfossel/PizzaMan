@@ -29,8 +29,6 @@ namespace PizzaMan.API
         }
         public static void CreateMaps()
         {
-            Mapper.CreateMap<City, CityModel>();
-            Mapper.CreateMap<Neighborhood, NeighborhoodModel>();
             Mapper.CreateMap<Photo, PhotoModel>();
             Mapper.CreateMap<User, UserModel.Profile>();
             Mapper.CreateMap<Pizzeria, PizzeriaModel>();
