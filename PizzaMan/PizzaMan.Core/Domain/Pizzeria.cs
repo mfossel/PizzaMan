@@ -10,7 +10,6 @@ namespace PizzaMan.Core.Domain
     public class Pizzeria
     {
         public int PizzeriaId { get; set; }
-        public int NeighborhoodId { get; set; }
         public string PizzeriaName { get; set; }
         public int YearOpened { get; set; }
         public string Address { get; set; }
@@ -42,8 +41,12 @@ namespace PizzaMan.Core.Domain
         public void Update(PizzeriaModel model)
         {
             PizzeriaId = model.PizzeriaId;
-            NeighborhoodId = model.NeighborhoodId;
+            PizzeriaName = model.PizzeriaName;
             YearOpened = model.YearOpened;
+            Address = model.Address;
+            City = model.City;
+            State = model.State;
+            ZipCode = model.ZipCode;
             Style = model.Style;
             Description = model.Description;
             Delivery = model.Delivery;

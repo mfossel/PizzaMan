@@ -7,13 +7,13 @@ namespace PizzaMan.DATA.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class initialpc : IMigrationMetadata
+    public sealed partial class initial : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(initialpc));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(initial));
         
         string IMigrationMetadata.Id
         {
-            get { return "201603121925138_initialpc"; }
+            get { return "201603141709236_initial"; }
         }
         
         string IMigrationMetadata.Source

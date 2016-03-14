@@ -60,9 +60,9 @@
     <Compile Include="Infrastructure\Repository.cs" />
     <Compile Include="Infrastructure\UnitOfWork.cs" />
     <Compile Include="Infrastructure\UserStore.cs" />
-    <Compile Include="Migrations\201603121925138_initialpc.cs" />
-    <Compile Include="Migrations\201603121925138_initialpc.Designer.cs">
-      <DependentUpon>201603121925138_initialpc.cs</DependentUpon>
+    <Compile Include="Migrations\201603141709236_initial.cs" />
+    <Compile Include="Migrations\201603141709236_initial.Designer.cs">
+      <DependentUpon>201603141709236_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -70,11 +70,6 @@
     <Compile Include="Repository\PizzeriaRepository.cs" />
     <Compile Include="Repository\ReviewRepository.cs" />
     <Compile Include="Repository\UserRepository.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201603121925138_initialpc.resx">
-      <DependentUpon>201603121925138_initialpc.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PizzaMan.Core\PizzaMan.Core.csproj">
@@ -85,6 +80,11 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201603141709236_initial.resx">
+      <DependentUpon>201603141709236_initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

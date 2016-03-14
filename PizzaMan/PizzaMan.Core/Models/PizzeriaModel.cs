@@ -9,8 +9,12 @@ namespace PizzaMan.Core.Models
     public class PizzeriaModel
     {
         public int PizzeriaId { get; set; }
-        public int NeighborhoodId { get; set; }
+        public string PizzeriaName { get; set; }
         public int YearOpened { get; set; }
+        public string Address { get; set; }
+        public string City { get; set; }
+        public string State { get; set; }
+        public int ZipCode { get; set; }
         public string Style { get; set; }
         public string Description { get; set; }
         public bool Delivery { get; set; }
