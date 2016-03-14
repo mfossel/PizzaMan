@@ -1,8 +1,9 @@
-﻿angular.module('app').controller('SubmitController', function ($scope, SubmitResource) {
+﻿angular.module('app').controller('SubmitController', function ($scope, PizzeriaResource) {
 
     $scope.createPizzeria = function () {
-        SubmitResource.save($scope.newPizzeria, function () {
+        PizzeriaResource.save($scope.newPizzeria, function () {
             $scope.newPizzeria = {};
+            alert('Pizzeria Added');
         });
     };
 

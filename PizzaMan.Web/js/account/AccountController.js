@@ -23,6 +23,7 @@
             function (response) {
                 alert("Registration complete.");
                 $scope.registration = {};
+                location.replace('/#/home/login');
             },
             function (error) {
                 alert("Failed to register");

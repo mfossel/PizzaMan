@@ -1,7 +1,8 @@
 ﻿body {
-    background-image: url('../img/photo-1453831210728-695502f9f795.jpg');
+    /*background-image: url('../img/photo-1453831210728-695502f9f795.jpg');*/
+    background-image: url('../img/pizza-744405_960_720.jpg');
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
     background-position: center center;
     background-attachment: fixed;
 }

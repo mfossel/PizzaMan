@@ -49,6 +49,13 @@ namespace PizzaMan.API.Controllers
             return Ok(Mapper.Map<PizzeriaModel>(pizzeria));
         }
 
+        // GET: api/Pizzerias/ZipCode
+        [Route("api/pizzerias/zipcode")]
+        public IEnumerable<PizzeriaModel> GetPizzeriasByZipCode(int zip)
+        {
+            return Mapper.Map<IEnumerable<PizzeriaModel>>(_pizzeriaRepository.GetWhere(p => p.ZipCode == zip));
+        }
+
         // PUT: api/Pizzerias/5
         [Authorize]
         [ResponseType(typeof(void))]
