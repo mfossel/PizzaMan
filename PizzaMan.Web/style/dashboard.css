@@ -29,7 +29,7 @@
     font-size: 32px;
     font-family: 'Oswald', sans-serif;
     letter-spacing: 2px;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
 }
 .info > p {
     color:whitesmoke;
