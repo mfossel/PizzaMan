@@ -69,13 +69,18 @@
 
             <div class="form-group">
                 <label class="pull-left text-success">Description</label>
-                <textarea id="inputTextMessage" class="form-control" placeholder="Enter a brief description of the pizzeria" ng-model="newPizzeria.Description"></textarea>
+                <textarea id="inputTextMessage" class="form-control" placeholder="Enter a brief description of the pizzeria" style="height:107px; resize:none;" ng-model="newPizzeria.Description"></textarea>
             </div>
 
             <div class="form-group">
                 <label class="pull-left text-success">Offers takeout?</label>
                 <input type="checkbox" aria-label="..." ng-model="newPizzeria.Takeout">
             </div>
+
+            <div class="form-group">
+                <label class="pull-left text-success">Offers delivery?</label>
+                <input type="checkbox" aria-label="..." ng-model="newPizzeria.Delivery" />
+            </div>        
 
             <div class="form-group">
                 <label class="pull-left text-success">Offers sitdown dining?</label>
@@ -96,6 +101,8 @@
                 <label class="pull-left text-success">Offers vegan options?</label>
                 <input type="checkbox" aria-label="..." ng-model="newPizzeria.VeganOption" />
             </div>        
+
+
 
         </div>
     </div>

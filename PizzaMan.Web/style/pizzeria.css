@@ -64,21 +64,17 @@
 
 .pizzeriaParagraph {
     text-align:left;
-    color:ghostwhite;
+    font-size:larger;
+    color:snow;
     margin-left: 25px;
 }
 
 .pizzeriaHeader {
     text-align:left;
     color:white;
-    font-size:larger;
+    font-size:xx-large;
     text-shadow: 15px 9px 9px 9px #808080;
     text-decoration:underline;
     
 
-}
-
-#reviewText {
-    text-align: left;
-    color: green;
 }
