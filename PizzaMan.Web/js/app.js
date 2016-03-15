@@ -6,7 +6,7 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider, $http
     $httpProvider.interceptors.push('AuthenticationInterceptor');
     $urlRouterProvider.otherwise('home/dashboard');
     $stateProvider
-        .state('home', { url: '/home', templateUrl: '/templates/home/home.html', controller: 'HomeController' })
+       .state('home', { url: '/home', templateUrl: '/templates/home/home.html', controller: 'HomeController' })
           .state('home.dashboard', { url: '/dashboard', parent:'home', templateUrl: '/templates/dashboard/dashboard.html', controller: 'DashboardController' })
           .state('home.review', { url: '/review', parent: 'home', templateUrl: '/templates/review/review.html', controller: 'HomeController' })
           .state('home.login', { url: '/login', parent: 'home', templateUrl: '/templates/account/login.html', controller: 'AccountController' })
@@ -17,6 +17,7 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider, $http
                 .state('home.find.city', { url: '/find/city=:city', parent: 'home', templateUrl: '/templates/find/find.results.html', controller: 'FindCityController' })
                 .state('home.find.name', { url: '/find/name=:name', parent: 'home', templateUrl: '/templates/find/find.results.html', controller: 'FindNameController' })
           .state('home.pizzeria', { url: '/pizzeria', parent: 'home', templateUrl: '/templates/pizzeria/pizzeria.html', controller: 'PizzeriaController' })
+          .state('home.review.pizzeria', { url: '/review/pizzeria', parent: 'home', templateUrl: '/templates/review/review.pizzeria.html', controller: 'ReviewController' })
     ;
 });
 

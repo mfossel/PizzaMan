@@ -11,11 +11,12 @@
                 <div class="info">
                     <h4 class="text-center">PizzaMan</h4>
                     <p id="slogan">A home for Pizza lovers</p>
+                    <img src="../../img/pizza-eat.jpg" class="img-rounded center-block" alt="Pizza lover" width="275" >
                     <form role="search" style="margin-top:30px">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Enter Zip Code">
+                            <input type="text" class="form-control" placeholder="Enter Zip Code" ng-model="zip">
                         </div>
-                        <button type="submit" class="btn btn-default">Find a pizzeria</button>
+                        <a class="btn btn-default" ng-href="#/home/find/zip={{zip}}">Find a pizzeria</a>
                     </form>
                 </div>
             </div>
@@ -24,10 +25,10 @@
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
             <div class="box">
                 <div class="box-icon">
-                    <span><img class="recentPhoto"src="../../img/o.jpg" /></span>
+                    <span><img class="recentPhoto" src="../../img/o.jpg" /></span>
                 </div>
                 <div class="info">
-                    <h4 class="text-center">Recently reviewed Pizzeria</h4>
+                    <h4 class="text-center">RECENTLY REVIEWED PIZZERIA</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti atque, tenetur quam aspernatur corporis at explicabo nulla dolore necessitatibus doloremque exercitationem sequi dolorem architecto perferendis quas aperiam debitis dolor soluta!</p>
                     <a href="" class="btn">Link</a>
                 </div>
