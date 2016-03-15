@@ -8,24 +8,24 @@
                 <span><img src="../../img/Pizza.png" /></span>
             </div>
             <div class="info">
-                <h4 class="text-center">Find a pizzeria!</h4>               
+                <h4 class="text-center">Find a pizzeria!</h4>
                 <form role="search" style="margin-top:45px;">
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Enter Zip Code" ng-model="zip">
                     </div>
-                    <button type="submit" class="btn btn-default" ng-href="#/home/find/{{zip}}">Find a pizzeria</button>
+                    <a class="btn btn-default" ng-href="#/home/find/zip={{zip}}">Find a pizzeria</a>
                 </form>
                 <form role="search" style="margin-top:45px;">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Enter City">
+                        <input type="text" class="form-control" placeholder="Enter City" ng-model="city">
                     </div>
-                    <button type="submit" class="btn btn-default">Find a pizzeria</button>
+                    <a class="btn btn-default" ng-href="#/home/find/city={{city}}">Find a pizzeria</a>
                 </form>
                 <form role="search" style="margin-top:45px;">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Enter name of pizzeria">
+                        <input type="text" class="form-control" placeholder="Enter name of pizzeria" ng-model="name">
                     </div>
-                    <button type="submit" class="btn btn-default">Find a pizzeria</button>
+                    <a class="btn btn-default" ng-href="#/home/find/name={{name}}">Find a pizzeria</a>
                 </form>
             </div>
         </div>

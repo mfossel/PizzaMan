@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -50,10 +48,27 @@ namespace PizzaMan.API.Controllers
         }
 
         // GET: api/Pizzerias/ZipCode
-        [Route("api/pizzerias/zip")]
-        public IEnumerable<PizzeriaModel> GetPizzeriasByZipCode(int zip)
+        [Authorize]
+        [Route("api/pizzerias/zip={zip}")]
+        public IEnumerable<PizzeriaModel> GetPizzeriasByZipCode(string zip)
         {
             return Mapper.Map<IEnumerable<PizzeriaModel>>(_pizzeriaRepository.GetWhere(p => p.ZipCode == zip));
+        }
+
+        // GET: api/Pizzerias/City
+        [Authorize]
+        [Route("api/pizzerias/city={city}")]
+        public IEnumerable<PizzeriaModel> GetPizzeriasByCity(string city)
+        {
+            return Mapper.Map<IEnumerable<PizzeriaModel>>(_pizzeriaRepository.GetWhere(p => p.City == city));
+        }
+
+        // GET: api/Pizzerias/Name
+        [Authorize]
+        [Route("api/pizzerias/name={name}")]
+        public IEnumerable<PizzeriaModel> GetPizzeriasByName(string name)
+        {
+            return Mapper.Map<IEnumerable<PizzeriaModel>>(_pizzeriaRepository.GetWhere(p => p.PizzeriaName == name));
         }
 
         // PUT: api/Pizzerias/5
@@ -79,7 +94,7 @@ namespace PizzaMan.API.Controllers
             {
                 _unitOfWork.Commit();
             }
-            catch (DbUpdateConcurrencyException)
+            catch (Exception)
             {
                 if (!PizzeriaExists(id))
                 {

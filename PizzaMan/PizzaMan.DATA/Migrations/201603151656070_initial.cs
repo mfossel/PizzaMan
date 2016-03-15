@@ -33,7 +33,7 @@ namespace PizzaMan.DATA.Migrations
                         Address = c.String(),
                         City = c.String(),
                         State = c.String(),
-                        ZipCode = c.Int(nullable: false),
+                        ZipCode = c.String(),
                         Style = c.String(),
                         Description = c.String(),
                         Delivery = c.Boolean(nullable: false),

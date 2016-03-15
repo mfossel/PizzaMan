@@ -3,7 +3,7 @@
     var zip = $stateParams.zip;
 
     function activate() {
-        FindResourcegetPizzeriaByZip(zip).then(function (response) {
+        FindResource.getPizzeriaByZip(zip).then(function (response) {
             $scope.pizzerias = response;
         });
 

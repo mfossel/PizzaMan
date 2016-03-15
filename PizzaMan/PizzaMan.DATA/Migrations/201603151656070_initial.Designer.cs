@@ -13,7 +13,7 @@ namespace PizzaMan.DATA.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201603141709236_initial"; }
+            get { return "201603151656070_initial"; }
         }
         
         string IMigrationMetadata.Source

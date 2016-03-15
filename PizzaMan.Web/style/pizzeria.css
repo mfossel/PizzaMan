@@ -63,15 +63,16 @@
 
 .pizzeriaParagraph {
     text-align:left;
-    color:white;
+    color:ghostwhite;
     margin-left: 25px;
 }
 
 .pizzeriaHeader {
     text-align:left;
     color:white;
-    font-size:large;
+    font-size:larger;
     text-shadow: 15px 9px 9px 9px #808080;
     text-decoration:underline;
+    
 
 }
