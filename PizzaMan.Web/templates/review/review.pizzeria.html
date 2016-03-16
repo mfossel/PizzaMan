@@ -8,60 +8,53 @@
                 <span><img src="../../img/o.jpg" width="200" /></span>
             </div>
             <div class="info">
-                <h4 class="text-center">Review PIZZERIA NAME</h4>
+                <h4 class="text-center">Review {{pizzeria.PizzeriaName}}</h4>
             </div>
 
             <div class="form-group">
-                <label for="input-1" class="control-label" id="reviewLabel">Rate the Pizza Crust</label>
+                <label for="input-1" class="control-label" id="reviewLabel" ng-model="newReview.Crust">Rate the Pizza Crust</label>
                 <div class="row lead" id="stars">
                     <div id="stars" class="starrr"></div>
                 </div>
             </div>
 
             <div class="form-group">
-                <label for="input-1" class="control-label" id="reviewLabel">Rate the Cheese</label>
+                <label for="input-1" class="control-label" id="reviewLabel" ng-model="newReview.Cheese">Rate the Cheese</label>
                 <div class="row lead" id="stars">
                     <div id="stars" class="starrr"></div>
                 </div>
             </div>
 
             <div class="form-group">
-                <label for="input-1" class="control-label" id="reviewLabel">Rate the Toppings</label>
+                <label for="input-1" class="control-label" id="reviewLabel" ng-model="newReview.Toppings">Rate the Toppings</label>
                 <div class="row lead" id="stars">
                     <div id="stars" class="starrr"></div>
                 </div>
             </div>
 
             <div class="form-group">
-                <label for="input-1" class="control-label" id="reviewLabel">Rate the Customer Service</label>
+                <label for="input-1" class="control-label" id="reviewLabel" ng-model="newReview.CustomerService">Rate the Customer Service</label>
                 <div class="row lead" id="stars">
                     <div id="stars" class="starrr"></div>
                 </div>
             </div>
 
             <div class="form-group">
-                <label for="input-1" class="control-label" id="reviewLabel">Rate the Other Food Items</label>
+                <label for="input-1" class="control-label" id="reviewLabel" ng-model="newReview.OtherFoodItems">Rate the Other Food Items</label>
                 <div class="row lead" id="stars">
                     <div id="stars" class="starrr"></div>
                 </div>
             </div>
 
             <div class="form-group">
-                <label for="input-1" class="control-label" id="reviewLabel">Rate the Drink Selection</label>
+                <label for="input-1" class="control-label" id="reviewLabel" ng-model="newReview.Drinks">Rate the Drink Selection</label>
                 <div class="row lead" id="stars">
                     <div id="stars" class="starrr"></div>
                 </div>
             </div>
 
             <div class="form-group">
-                <label for="input-1" class="control-label" id="reviewLabel">Rate the Pizza Crust</label>
-                <div class="row lead" id="stars">
-                    <div id="stars" class="starrr"></div>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="input-1" class="control-label" id="reviewLabel">Rate the Overall Experience</label>
+                <label for="input-1" class="control-label" id="reviewLabel" ng-model="newReview.OverallExperience">Rate the Overall Experience</label>
                 <div class="row lead" id="stars">
                     <div id="stars" class="starrr"></div>
                 </div>
@@ -75,7 +68,7 @@
 
     <div class="container">
         <div class="col-xs-12" style="margin-top:30px; margin-bottom:30px;">
-            <button class="btn-lg btn-success center-block" ng-click="">Submit Review</button>
+            <button class="btn-lg btn-success center-block" ng-click="createReview()">Submit Review</button>
         </div>
 
 
