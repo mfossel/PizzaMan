@@ -34,6 +34,8 @@ namespace PizzaMan.API
             Mapper.CreateMap<Pizzeria, PizzeriaModel>();
             Mapper.CreateMap<Review, ReviewModel>();
             Mapper.CreateMap<User, UserModel>();
+            Mapper.CreateMap<Aspect, AspectModel>();
+            Mapper.CreateMap<AspectRating, AspectRatingModel>();
         }
     }
 }

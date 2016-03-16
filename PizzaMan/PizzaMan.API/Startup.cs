@@ -68,6 +68,8 @@ namespace PizzaMan.Api
             container.Register<IPhotoRepository, PhotoRepository>();
             container.Register<IPizzeriaRepository, PizzeriaRepository>();
             container.Register<IReviewRepository, ReviewRepository>();
+            container.Register<IAspectRepository, AspectRepository>();
+            container.Register<IAspectRatingRepository, AspectRatingRepository>();
             container.Register<IUserRepository, UserRepository>();
             container.Register<IUserStore<User, string>, UserStore>(Lifestyle.Scoped);
             container.Register<IAuthorizationRepository, AuthorizationRepository>(Lifestyle.Scoped);

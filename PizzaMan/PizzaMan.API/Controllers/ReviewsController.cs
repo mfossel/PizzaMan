@@ -93,6 +93,9 @@ namespace PizzaMan.API.Controllers
             }
 
             var dbReview = new Review(review);
+
+            dbReview.User = CurrentUser;
+
             _reviewRepository.Add(dbReview);
             _unitOfWork.Commit();
             review.ReviewId = dbReview.ReviewId;

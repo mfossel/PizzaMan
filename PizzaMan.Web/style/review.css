@@ -4,7 +4,7 @@
     background-color:black;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     padding: 10px 25px;
-    text-align: left;
+    text-align: center;
     display: block;
     margin-top: 60px;
     opacity: .90;
@@ -53,6 +53,3 @@
     transition: all 0.5s ease 0s;
 }
 
-#stars {
-    margin-left:35px;
-}

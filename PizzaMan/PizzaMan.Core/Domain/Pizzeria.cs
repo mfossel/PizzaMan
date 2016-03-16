@@ -1,6 +1,7 @@
 ﻿using PizzaMan.Core.Models;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,12 +29,24 @@ namespace PizzaMan.Core.Domain
         public bool GlutenFreeOption { get; set; }
         public bool VeganOption { get; set; }
 
-        public ICollection<Review> Reviews { get; set; }
-        public ICollection<Photo> Photos { get; set; }
+        public float AverageRating
+        {
+            get
+            {
+                return Reviews.Count == 0 
+                    ? 0
+                    : (float)Math.Round(Reviews.Average(r => r.OverallRating), 1);
+            }
+        }
 
-        public Pizzeria() { }
+        public virtual ICollection<Review> Reviews { get; set; }
+        public virtual ICollection<Photo> Photos { get; set; }
 
-        public Pizzeria(PizzeriaModel model)
+        public Pizzeria() {
+            Reviews = new Collection<Review>();
+        }
+
+        public Pizzeria(PizzeriaModel model) : this()
         {
             this.Update(model);
         }

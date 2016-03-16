@@ -30,3 +30,4 @@ C:\dev\PizzaMan\PizzaMan\PizzaMan.DATA\obj\Debug\PizzaMan.DATA.Migrations.initia
 C:\dev\PizzaMan\PizzaMan\PizzaMan.DATA\obj\Debug\PizzaMan.Data.csproj.GenerateResource.Cache
 C:\dev\origin\PizzaMan\PizzaMan\PizzaMan.DATA\obj\Debug\PizzaMan.DATA.Migrations.initial.resources
 C:\dev\origin\PizzaMan\PizzaMan\PizzaMan.DATA\obj\Debug\PizzaMan.Data.csproj.GenerateResource.Cache
+C:\dev\origin\PizzaMan\PizzaMan\PizzaMan.DATA\obj\Debug\PizzaMan.DATA.Migrations.second.resources
