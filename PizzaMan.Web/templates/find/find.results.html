@@ -7,6 +7,11 @@
             <h4>{{pizzeria.PizzeriaName}}</h4>
         </div>
 
+        <div class="info" id="pizzeriaStars" style="padding-bottom:25px;">
+            <input-stars max="5" ng-model="pizzeria.AverageRating" readonly="true"></input-stars>
+        </div>
+
+
         <div style="padding-bottom:15px;">
             <p class="pizzeriaHeader">Address </p>
             <p class="pizzeriaParagraph">{{pizzeria.Address}} {{pizzeria.City}} {{pizzeria.State}} {{pizzeria.ZipCode}}</p>
@@ -68,8 +73,10 @@
             <p class="pizzeriaParagraph">{{pizzeria.VeganOption}}</p>
         </div>
 
-
-            <a class="btn btn-default" ng-href="#/home/review/pizzeria={{pizzeria.PizzeriaId}}">Review this Pizzeria</a>
+        <div style="text-align:left; padding-bottom:15px;">
+            <a class="btn btn-success" ng-href="#/home/review/pizzeria={{pizzeria.PizzeriaName}}">Review this Pizzeria</a>
+            <a class="btn btn-success" ng-href="#/home/review/display={{pizzeria.PizzeriaId}}">Browse Reviews</a>
+        </div>
 
 
     </div>

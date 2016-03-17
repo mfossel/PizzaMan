@@ -10,6 +10,7 @@
         ReviewResource.save($scope.newReview, function () {
             $scope.newReview = {};
             alert('Review Added');
+            location.replace('#/home/find/name=' +  $scope.pizzeria.PizzeriaName);
         });
     };
 
