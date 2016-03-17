@@ -11,7 +11,7 @@
                 <div class="info">
                     <h4 class="text-center">PizzaMan</h4>
                     <p id="slogan">A home for Pizza lovers</p>
-                    <img src="../../img/pizza-eat.jpg" class="img-rounded center-block" alt="Pizza lover" width="275" >
+                    <img src="../../img/pizza-eat.jpg" class="img-rounded center-block" alt="Pizza lover" width="275">
                     <form role="search" style="margin-top:30px">
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Enter Zip Code" ng-model="zip">
@@ -28,9 +28,21 @@
                     <span><img class="recentPhoto" src="../../img/o.jpg" /></span>
                 </div>
                 <div class="info">
-                    <h4 class="text-center">RECENTLY REVIEWED PIZZERIA</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti atque, tenetur quam aspernatur corporis at explicabo nulla dolore necessitatibus doloremque exercitationem sequi dolorem architecto perferendis quas aperiam debitis dolor soluta!</p>
-                    <a href="" class="btn">Link</a>
+                    <h4 class="text-center" style="padding-bottom:20px;">Recently Reviewed</h4>
+                    <h4 id="pizzeria-review-label">{{review.Pizzeria.PizzeriaName}}</h4>\
+
+                    <div ng-repeat="aspect in review.AspectRatings">
+                        <label class="reviewLabel">{{aspect.Aspect.Name}}</label>
+                        <div class="form-group">
+                            <input-stars max="5" ng-model="aspect.Rating" readonly="true"></input-stars>
+                        </div>
+                    </div>
+
+                    <label class="reviewLabel">Overall Rating</label>
+                    <div class="form-group">
+                        <input-stars max="5" ng-model="review.OverallRating" readonly="true"></input-stars>
+                    </div>
+                    <a class="btn btn-success" ng-href="#/home/find/name={{review.Pizzeria.PizzeriaName}}">Link</a>
                 </div>
             </div>
         </div>

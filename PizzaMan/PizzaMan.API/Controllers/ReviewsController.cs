@@ -47,12 +47,22 @@ namespace PizzaMan.API.Controllers
         }
 
         // GET: api/Review/Pizzeria
-        [Authorize]
         [Route("api/reviews/pizzeriaId={id}")]
         public IEnumerable<ReviewModel> GetReviewsByPizzeria(int id)
         {
             return Mapper.Map<IEnumerable<ReviewModel>>(_reviewRepository.GetWhere(r => r.PizzeriaId == id));
         }
+
+        // GET: api/Review/Pizzeria
+        [Route("api/reviews/latest")]
+        public IHttpActionResult GetLatestReview()
+        {
+            Review latestReview = _reviewRepository.GetAll().OrderBy(r => r.ReviewId).Last();
+
+            return Ok(Mapper.Map<ReviewModel>(latestReview));
+        }
+
+
 
         // PUT: api/Reviews/5
         [ResponseType(typeof(void))]

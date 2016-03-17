@@ -2,5 +2,12 @@
     color: crimson;
     text-shadow:.5px .5px .5px yellow;
     font-family: 'Oswald', sans-serif;
-    font-size: x-large;
+    font-size: xx-large;
+    margin-bottom:5px;
+}
+
+
+.navbartext {
+    margin-top: 4px;
+    font-size:large;
 }
