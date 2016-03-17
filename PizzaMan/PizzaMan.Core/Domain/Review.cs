@@ -17,7 +17,7 @@ namespace PizzaMan.Core.Domain
 
 
         public virtual Pizzeria Pizzeria { get; set; }
-        public User User { get; set; }
+        public virtual User User { get; set; }
 
         public virtual ICollection<AspectRating> AspectRatings { get; set; }
 

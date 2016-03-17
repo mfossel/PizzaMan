@@ -29,6 +29,16 @@ namespace PizzaMan.Core.Domain
         public bool GlutenFreeOption { get; set; }
         public bool VeganOption { get; set; }
 
+        public int NumberOfReviews
+        {
+            get
+            {
+                return Reviews.Count == 0
+                    ? 0
+                    : Reviews.Count;
+            }
+        }
+
         public float AverageRating
         {
             get

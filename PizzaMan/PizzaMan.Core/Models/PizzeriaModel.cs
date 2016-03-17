@@ -27,5 +27,6 @@ namespace PizzaMan.Core.Models
         public bool GlutenFreeOption { get; set; }
         public bool VeganOption { get; set; }
         public float AverageRating { get; set; }
+        public int NumberOfReviews { get; set; }
     }
 }

@@ -14,5 +14,7 @@ namespace PizzaMan.Core.Models
 
         public float Rating { get; set; }
 
+        public AspectModel Aspect { get; set; }
+
     }
 }

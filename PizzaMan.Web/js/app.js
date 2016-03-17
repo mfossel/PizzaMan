@@ -19,7 +19,7 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider, $http
           .state('home.pizzeria', { url: '/pizzeria', parent: 'home', templateUrl: '/templates/pizzeria/pizzeria.html', controller: 'PizzeriaController' })
           .state('home.review', { url: '/review', parent: 'home', templateUrl: '/templates/review/review.html', controller: 'HomeController' })
                  .state('home.review.pizzeria', { url: '/review/pizzeria=:name', parent: 'home', templateUrl: '/templates/review/review.pizzeria.html', controller: 'ReviewController' })
-                 .state('home.review.display', { url: '/review/display=:id', parent: 'home', templateUrl: '/templates/review/review.display.html', controller: 'ReviewController' })
+                 .state('home.review.display', { url: '/review/display=:id', parent: 'home', templateUrl: '/templates/review/review.display.html', controller: 'ReviewDisplayController' })
     ;
 });
 

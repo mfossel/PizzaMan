@@ -1,15 +1,16 @@
 ﻿
 .box {
     border-radius: 3px;
-    background-color:black;
+    background-color: black;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     padding: 10px 25px;
     text-align: center;
     display: block;
     margin-top: 60px;
     opacity: .90;
-    color:white;
+    color: white;
 }
+
 .box-icon {
     border-radius: 50%;
     display: table;
@@ -18,27 +19,31 @@
     width: 100px;
     margin-top: -61px;
 }
-.box-icon span {
-    color: #fff;
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
-}
+
+    .box-icon span {
+        color: #fff;
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+    }
+
 .info h4 {
-    color:whitesmoke;
+    color: whitesmoke;
     text-shadow: 15px 9px 9px 9px #808080;
     font-size: 32px;
     font-family: 'Oswald', sans-serif;
     letter-spacing: 2px;
     /*text-transform: uppercase;*/
 }
+
 .info > p {
-    color:whitesmoke;
+    color: whitesmoke;
     font-size: 16px;
     padding-top: 10px;
     text-align: justify;
     font-family: Nunito;
 }
+
 .info > a {
     background-color: #03a9f4;
     border-radius: 2px;
@@ -46,10 +51,26 @@
     color: #fff;
     transition: all 0.5s ease 0s;
 }
-.info > a:hover {
-    background-color: #0288d1;
-    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.12);
-    color: #fff;
-    transition: all 0.5s ease 0s;
+
+    .info > a:hover {
+        background-color: #0288d1;
+        box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.12);
+        color: #fff;
+        transition: all 0.5s ease 0s;
+    }
+
+#reviewerLabel {
+    font-size: large;
+    padding-bottom: 15px;
+}
+
+#userName {
+    color: green;
+    padding-left: 15px;
+}
+
+#reviews {
+    padding-top: 10px;
+    padding-bottom: 30px;
 }
 

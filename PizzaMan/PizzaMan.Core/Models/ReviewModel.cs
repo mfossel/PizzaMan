@@ -15,6 +15,8 @@ namespace PizzaMan.Core.Models
         public decimal OverallRating { get; set; }
 
         public PizzeriaModel Pizzeria { get; set; }
+        public UserModel User { get; set; }
+
         public ICollection<AspectRatingModel> AspectRatings { get; set; }
     }
 }

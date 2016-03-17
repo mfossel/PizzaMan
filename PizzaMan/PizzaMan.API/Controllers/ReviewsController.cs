@@ -46,6 +46,14 @@ namespace PizzaMan.API.Controllers
             return Ok(Mapper.Map<ReviewModel>(review));
         }
 
+        // GET: api/Review/Pizzeria
+        [Authorize]
+        [Route("api/reviews/pizzeriaId={id}")]
+        public IEnumerable<ReviewModel> GetReviewsByPizzeria(int id)
+        {
+            return Mapper.Map<IEnumerable<ReviewModel>>(_reviewRepository.GetWhere(r => r.PizzeriaId == id));
+        }
+
         // PUT: api/Reviews/5
         [ResponseType(typeof(void))]
         public IHttpActionResult PutReview(int id, ReviewModel review)
