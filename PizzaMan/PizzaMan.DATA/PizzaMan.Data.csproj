@@ -68,6 +68,10 @@
     <Compile Include="Migrations\201603162315363_second.Designer.cs">
       <DependentUpon>201603162315363_second.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201603181909014_second1.cs" />
+    <Compile Include="Migrations\201603181909014_second1.Designer.cs">
+      <DependentUpon>201603181909014_second1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\AspectRatingRepository.cs" />
@@ -93,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201603162315363_second.resx">
       <DependentUpon>201603162315363_second.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603181909014_second1.resx">
+      <DependentUpon>201603181909014_second1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -62,6 +62,12 @@ namespace PizzaMan.API.Controllers
             return Ok(Mapper.Map<ReviewModel>(latestReview));
         }
 
+        // GET: api/Review/User
+        [Route("api/reviews/user")]
+        public IEnumerable<ReviewModel> GetReviewsByUser()
+        {
+            return Mapper.Map<IEnumerable<ReviewModel>>(_reviewRepository.GetWhere(r => r.UserId == CurrentUser.Id));
+        }
 
 
         // PUT: api/Reviews/5

@@ -30,7 +30,6 @@ namespace PizzaMan.API
         public static void CreateMaps()
         {
             Mapper.CreateMap<Photo, PhotoModel>();
-            Mapper.CreateMap<User, UserModel.Profile>();
             Mapper.CreateMap<Pizzeria, PizzeriaModel>();
             Mapper.CreateMap<Review, ReviewModel>();
             Mapper.CreateMap<User, UserModel>();

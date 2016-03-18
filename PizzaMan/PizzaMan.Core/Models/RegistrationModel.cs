@@ -16,6 +16,9 @@ namespace PizzaMan.Core.Models
         public string EmailAddress { get; set; }
 
         [Required]
+        public string ZipCode { get; set; }
+
+        [Required]
         [StringLength(64, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 8)]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]

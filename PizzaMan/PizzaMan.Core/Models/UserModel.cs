@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PizzaMan.Core.Domain;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,14 +12,10 @@ namespace PizzaMan.Core.Models
         public string Id { get; set; }
         public string EmailAddress { get; set; }
         public string UserName { get; set; }
+        public string ZipCode { get; set; }
 
         public string PasswordHash { get; set; }
         public string SecurityStamp { get; set; }
 
-        public class Profile : UserModel
-        {
-           PizzeriaModel FavoritePizzeria { get; set; }
-
-        }
     }
 }

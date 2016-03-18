@@ -1,6 +1,6 @@
-﻿angular.module('app').controller('HomeController', function ($scope, AuthenticationService, HomeResource) {
+﻿angular.module('app').controller('HomeController', function ($scope, AuthenticationService, ProfileResource) {
     function activate() {
-        HomeResource.getCurrentUser().then(function (response) {
+        ProfileResource.getCurrentUser().then(function (response) {
             $scope.user = response;
         });
 

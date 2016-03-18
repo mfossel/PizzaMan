@@ -32,6 +32,7 @@ namespace PizzaMan.DATA.Infrastructure
             {
                 UserName = model.Username,
                 EmailAddress = model.EmailAddress,
+                ZipCode = model.ZipCode
                
             };
 

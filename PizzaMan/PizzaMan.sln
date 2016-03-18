@@ -31,6 +31,28 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaMan.API", "PizzaMan.AP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaMan.Data", "PizzaMan.DATA\PizzaMan.Data.csproj", "{891BE25A-2164-49D6-BFCB-89D8DD1DE3DA}"
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PizzaMan.Admin.Web", "..\PizzaMan.Admin.Web\", "{B8A4AEC6-32A9-423F-958A-8F46AD48344D}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_57388"
+		Debug.AspNetCompiler.PhysicalPath = "..\PizzaMan.Admin.Web\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57388\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_57388"
+		Release.AspNetCompiler.PhysicalPath = "..\PizzaMan.Admin.Web\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57388\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "57388"
+		SlnRelativePath = "..\PizzaMan.Admin.Web\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +75,10 @@ Global
 		{891BE25A-2164-49D6-BFCB-89D8DD1DE3DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{891BE25A-2164-49D6-BFCB-89D8DD1DE3DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{891BE25A-2164-49D6-BFCB-89D8DD1DE3DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8A4AEC6-32A9-423F-958A-8F46AD48344D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8A4AEC6-32A9-423F-958A-8F46AD48344D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8A4AEC6-32A9-423F-958A-8F46AD48344D}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8A4AEC6-32A9-423F-958A-8F46AD48344D}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

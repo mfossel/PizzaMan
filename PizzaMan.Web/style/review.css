@@ -61,7 +61,7 @@
 
 #reviewerLabel {
     font-size: large;
-    padding-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 #userName {
@@ -71,6 +71,6 @@
 
 #reviews {
     padding-top: 10px;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
 }
 

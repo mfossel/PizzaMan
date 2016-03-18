@@ -52,10 +52,10 @@ namespace PizzaMan.API.Controllers
 
         [Route("api/accounts/currentuser")]
         [HttpGet]
-        [ResponseType(typeof(UserModel.Profile))]
+        [ResponseType(typeof(UserModel))]
         public IHttpActionResult GetCurrentUser()
         {
-            return Ok(Mapper.Map<UserModel.Profile>(CurrentUser));
+            return Ok(Mapper.Map<UserModel>(CurrentUser));
         }
 
      

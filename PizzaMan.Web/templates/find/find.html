@@ -1,7 +1,7 @@
-﻿<link href="../../style/pizzeria.css" rel="stylesheet" />
+﻿
+<link href="../../style/find.css" rel="stylesheet" />
+
 <div class="container">
-
-
     <div class="col-xs-12">
         <div class="box">
             <div class="box-icon">
@@ -13,98 +13,21 @@
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Enter Zip Code" ng-model="zip">
                     </div>
-                    <a class="btn btn-default" ng-href="#/home/find/zip={{zip}}">Find a pizzeria</a>
+                    <a class="btn btn-success" ng-href="#/home/find/zip={{zip}}">Find a pizzeria by Zip Code</a>
                 </form>
                 <form role="search" style="margin-top:45px;">
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Enter City" ng-model="city">
                     </div>
-                    <a class="btn btn-default" ng-href="#/home/find/city={{city}}">Find a pizzeria</a>
+                    <a class="btn btn-success" ng-href="#/home/find/city={{city}}">Find a pizzeria by City</a>
                 </form>
                 <form role="search" style="margin-top:45px;">
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Enter name of pizzeria" ng-model="name">
                     </div>
-                    <a class="btn btn-default" ng-href="#/home/find/name={{name}}">Find a pizzeria</a>
+                    <a class="btn btn-success" ng-href="#/home/find/name={{name}}">Find a pizzeria by Name</a>
                 </form>
             </div>
         </div>
-
-
     </div>
-
-    <div class="col-xs-12">
-        <div class="box" ng-repeat="pizzeria in pizzerias">
-
-            <div class="info" style="padding-bottom:45px;">
-                <h4>{{pizzeria.PizzeriaName}}</h4>
-            </div>
-
-            <div style="padding-bottom:15px;">
-                <p class="pizzeriaHeader">Address </p>
-                <p class="pizzeriaParagraph">{{pizzeria.Address}} {{pizzeria.City}} {{pizzeria.State}} {{pizzeria.ZipCode}}</p>
-            </div>
-
-
-            <div style="padding-bottom:15px;">
-                <p class="pizzeriaHeader">Phone Number </p>
-                <p class="pizzeriaParagraph">{{pizzeria.PhoneNumber}}</p>
-            </div>
-
-            <div style="padding-bottom:15px;">
-                <p class="pizzeriaHeader">YearOpened</p>
-                <p class="pizzeriaParagraph">{{pizzeria.YearOpened}}</p>
-            </div>
-
-            <div style="padding-bottom:15px;">
-                <p class="pizzeriaHeader">Style of Pizza</p>
-                <p class="pizzeriaParagraph">{{pizzeria.Style}}</p>
-            </div>
-
-            <div style="padding-bottom:15px;">
-                <p class="pizzeriaHeader">Description</p>
-                <p class="pizzeriaParagraph">{{pizzeria.Description}}</p>
-            </div>
-
-            <div style="padding-bottom:15px;">
-                <p class="pizzeriaHeader">Menu URL</p>
-                <p class="pizzeriaParagraph">{{pizzeria.MenuURL}}</p>
-            </div>
-
-            <div style="padding-bottom:15px;">
-                <p class="pizzeriaHeader">Offers Takeour?</p>
-                <p class="pizzeriaParagraph">{{pizzeria.Takeout}}</p>
-            </div>
-
-            <div style="padding-bottom:15px;">
-                <p class="pizzeriaHeader">Offers Sitdown Dining?</p>
-                <p class="pizzeriaParagraph">{{pizzeria.Sitdown}}</p>
-            </div>
-
-            <div style="padding-bottom:15px;">
-                <p class="pizzeriaHeader">Serves Alcohol?</p>
-                <p class="pizzeriaParagraph">{{pizzeria.Alcohol}}</p>
-            </div>
-
-            <div style="padding-bottom:15px;">
-                <p class="pizzeriaHeader">Offers Gluten-free Crust?</p>
-                <p class="pizzeriaParagraph">{{pizzeria.GlutenFreeOption}}</p>
-            </div>
-
-            <div style="padding-bottom:15px;">
-                <p class="pizzeriaHeader">Offers Vegan Options?</p>
-                <p class="pizzeriaParagraph">{{pizzeria.VeganOption}}</p>
-            </div>
-
-
-
-
-        </div>
-
-    </div>
-
-
-
-
-
 </div>
