@@ -37,9 +37,6 @@
             });
 
             state.authorized = true;
-            
-           
-
 
             deferred.resolve(response);
         }).error(function (err, status) {

@@ -16,7 +16,7 @@ using PizzaMan.API.Infrastructure;
 
 namespace PizzaMan.API.Controllers
 {
-    [Authorize]
+    
     public class ReviewsController : BaseApiController
     {
         private readonly IReviewRepository _reviewRepository;
@@ -65,6 +65,7 @@ namespace PizzaMan.API.Controllers
 
 
         // PUT: api/Reviews/5
+        [Authorize]
         [ResponseType(typeof(void))]
         public IHttpActionResult PutReview(int id, ReviewModel review)
         {
@@ -102,6 +103,7 @@ namespace PizzaMan.API.Controllers
         }
 
         // POST: api/Reviews
+        [Authorize]
         [ResponseType(typeof(Review))]
         public IHttpActionResult PostReview(ReviewModel review)
         {
@@ -123,6 +125,7 @@ namespace PizzaMan.API.Controllers
         }
 
         // DELETE: api/Reviews/5
+        [Authorize]
         [ResponseType(typeof(Review))]
         public IHttpActionResult DeleteReview(int id)
         {

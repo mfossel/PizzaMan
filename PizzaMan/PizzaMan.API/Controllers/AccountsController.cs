@@ -58,22 +58,6 @@ namespace PizzaMan.API.Controllers
             return Ok(Mapper.Map<UserModel.Profile>(CurrentUser));
         }
 
-        [Route("api/accounts/currentuser")]
-        [HttpPut]
-        public IHttpActionResult UpdateCurrentUser(string id, UserModel.Profile user)
-        {
-            // check to see that id == user.Id
-
-            // check to see that user.Id == CurrentUser.Id
-
-            // update the user
-
-            // call repository.update
-
-            // call unitofwork.commit
-
-            return StatusCode(HttpStatusCode.NoContent);
-        }
-      
+     
     }
 }
