@@ -12,9 +12,6 @@
         );
     };
 
-    $scope.logout = function () {
-        AuthenticationService.logout();
-    }
 
     $scope.registration = {};
 
