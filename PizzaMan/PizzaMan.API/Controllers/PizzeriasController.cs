@@ -48,7 +48,6 @@ namespace PizzaMan.API.Controllers
         }
 
         // GET: api/Pizzerias/ZipCode
-        [Authorize]
         [Route("api/pizzerias/zip={zip}")]
         public IEnumerable<PizzeriaModel> GetPizzeriasByZipCode(string zip)
         {
@@ -56,7 +55,6 @@ namespace PizzaMan.API.Controllers
         }
 
         // GET: api/Pizzerias/City
-        [Authorize]
         [Route("api/pizzerias/city={city}")]
         public IEnumerable<PizzeriaModel> GetPizzeriasByCity(string city)
         {
@@ -64,7 +62,7 @@ namespace PizzaMan.API.Controllers
         }
 
         // GET: api/Pizzerias/Name
-        [Authorize]
+
         [Route("api/pizzerias/name={name}")]
         public IEnumerable<PizzeriaModel> GetPizzeriasByName(string name)
         {

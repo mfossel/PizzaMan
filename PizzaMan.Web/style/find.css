@@ -58,17 +58,17 @@
 
 .pizzeriaParagraph {
     text-align:center;
-    font-size:larger;
-    color:snow;
+
+    color:gray;
 
 }
 
 .pizzeriaHeader {
     text-align:center;
     color:white;
-    font-size:x-large;
+    font-size:large;
     text-shadow: 15px 9px 9px 9px #808080;
-    text-decoration:underline;
+
     
 
 }
