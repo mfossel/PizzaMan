@@ -157,5 +157,14 @@ namespace PizzaMan.API.Controllers
             var mostReviews = _pizzeriaRepository.GetAll().OrderByDescending(r => r.NumberOfReviews).Take(5);
             return Mapper.Map<IEnumerable<PizzeriaModel>>(mostReviews);
         }
+
+        // GET: api/Pizzerias/HighestRated
+        [Route("api/pizzerias/highestrated")]
+        public IEnumerable<PizzeriaModel> GetPizzeriasHighestRated()
+        {
+
+            var highestRated = _pizzeriaRepository.GetAll().OrderByDescending(p => p.AverageRating).Take(5);
+            return Mapper.Map<IEnumerable<PizzeriaModel>>(highestRated);
+        }
     }
 }

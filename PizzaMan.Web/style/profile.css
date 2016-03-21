@@ -64,20 +64,16 @@
 }
 
 .pizzeriaParagraph {
-    text-align:center;
     font-size:larger;
     color:snow;
-
+    margin-left:15px;
 }
 
 .pizzeriaHeader {
-    text-align:center;
     color:white;
     font-size:x-large;
     text-shadow: 15px 9px 9px 9px #808080;
     text-decoration:underline;
-    
-
 }
 
 #pizzeriaStars {
@@ -92,4 +88,10 @@
 
 #reviewLabel {
     color:dimgrey;
+}
+
+#pizzeriaLabel {
+    color:whitesmoke;
+    font-size:large;
+    margin-bottom:10px;
 }

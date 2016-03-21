@@ -1,9 +1,17 @@
 ﻿<div class="container">
+
+    <form>
+        <div class="form-group">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search" ng-model="searchReview">
+            </div>
+        </div>
+    </form>
+
     <table class="table-hover table-bordered">
 
         <thead>
             <tr>
-                <th style="font-size:large; padding:5px">Review ID</th>
                 <th style="font-size:large; padding:5px">User Name</th>
                 <th style="font-size:large; padding:5px">Pizzeria Name</th>
                 <th style="font-size:large; padding:5px">Overall Rating</th>
@@ -12,11 +20,10 @@
         </thead>
         <tbody>
 
-            <tr ng-repeat="review in reviews">
-                <td style="padding:5px">{{review.ReviewId}}</td>
+            <tr ng-repeat="review in reviews | filter:searchReview">
                 <td style="padding:5px">{{review.User.UserName}}</td>
                 <td style="padding:5px">{{review.Pizzeria.PizzeriaName}}</td>
-                <td style="padding:5px">{{review.OverallRating}}</td>
+                <td style="padding:5px">{{review.OverallRating | number:1}}</td>
                 <td>
                     <a class="btn btn-default" ng-href="#/app/leases/detail/{{lease.LeaseId}}">Edit</a>
                     <a class="btn btn-danger" ng-click="deletePizzeria(pizzeria)">Delete</a>

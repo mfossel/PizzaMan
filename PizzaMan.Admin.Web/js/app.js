@@ -12,6 +12,7 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider, $http
 
        .state('app.photo', { url: '/photo', parent: 'app', templateUrl: '/templates/app/photo/photo.html', controller: 'PhotoController' })
        .state('app.pizzeria', { url: '/pizzeria', parent: 'app', templateUrl: '/templates/app/pizzeria/pizzeria.html', controller: 'PizzeriaController' })
+             .state('app.pizzeria.data', { url: '/data/pizzeria', parent: 'app', templateUrl: '/templates/app/pizzeria/pizzeria.data.html', controller: 'PizzeriaDataController' })
        .state('app.review', { url: '/review', parent: 'app', templateUrl: '/templates/app/review/review.html', controller: 'ReviewController' })
        .state('app.user', { url: '/user', parent: 'app', templateUrl: '/templates/app/user/user.html', controller: 'UserController' })
         ;

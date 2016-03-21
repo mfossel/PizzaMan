@@ -1,7 +1,15 @@
 ﻿<div class="container">
     <a class="btn btn-success" style="margin-bottom:15px" ng-href="">Create Pizzeria</a>
-    <table class="table-hover table-bordered">
 
+    <form>
+        <div class="form-group">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search" ng-model="searchPizzeria">
+            </div>
+        </div>
+    </form>
+
+    <table class="table-hover table-bordered">
         <thead>
             <tr>
                 <th style="font-size:large; padding:5px">Pizzeria Name</th>
@@ -15,9 +23,9 @@
         </thead>
         <tbody>
 
-            <tr ng-repeat="pizzeria in pizzerias">
+            <tr ng-repeat="pizzeria in pizzerias | filter:searchPizzeria">
                 <td style="padding:5px">{{pizzeria.PizzeriaName}}</td>
-                <td style="padding:5px">{{pizzeria.Address}} {{pizzeria.City}} {{pizzeria.State}} {{pizzeria.ZipCode}}</td>
+                <td style="padding:5px">{{pizzeria.City}} {{pizzeria.State}} {{pizzeria.ZipCode}}</td>
                 <td style="padding:5px">{{pizzeria.PhoneNumber}}</td>
                 <td style="padding:5px">{{pizzeria.YearOpened}}</td>
                 <td style="padding:5px">{{pizzeria.AverageRating}}</td>
