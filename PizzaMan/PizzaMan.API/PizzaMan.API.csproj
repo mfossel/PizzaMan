@@ -188,6 +188,7 @@
     <Compile Include="Controllers\PhotosController.cs" />
     <Compile Include="Controllers\PizzeriasController.cs" />
     <Compile Include="Controllers\ReviewsController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Infrastructure\BaseApiController.cs" />
     <Compile Include="Infrastructure\PizzaManAuthorizationServerProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -58,6 +58,5 @@ namespace PizzaMan.API.Controllers
             return Ok(Mapper.Map<UserModel>(CurrentUser));
         }
 
-     
     }
 }
