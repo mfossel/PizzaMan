@@ -124,5 +124,13 @@ namespace PizzaMan.API.Controllers
         {
             return _userRepository.Any(e => e.Id == id);
         }
+
+        // GET: api/Users/MostReviews
+        [Route("api/users/mostreviews")]
+        public IEnumerable<UserModel> GetUsersMostReviews()
+        {
+            var mostReviews = _userRepository.GetAll().OrderByDescending(u => u.NumberOfReviews).Take(5);
+            return Mapper.Map<IEnumerable<UserModel>>(mostReviews);
+        }
     }
 }

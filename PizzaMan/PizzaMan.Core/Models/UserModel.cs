@@ -16,6 +16,6 @@ namespace PizzaMan.Core.Models
 
         public string PasswordHash { get; set; }
         public string SecurityStamp { get; set; }
-
+        public int NumberOfReviews { get; set; }
     }
 }

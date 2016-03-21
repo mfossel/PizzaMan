@@ -4,11 +4,11 @@ angular.module('app').value('apiUrl', 'http://localhost:49834/api/');
 
 angular.module('app').config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
     $httpProvider.interceptors.push('AuthenticationInterceptor');
-    $urlRouterProvider.otherwise('app');
+    $urlRouterProvider.otherwise('app/dashboard');
     $stateProvider
        .state('home', { url: '/home', templateUrl: '/templates/home/home.html', controller: 'HomeController' })
        .state('app', { url: '/app', templateUrl: '/templates/app/app.html', controller: 'AppController' })
-       .state('app.dashboard', { url: '/dashboard', parent: 'app', templateUrl: '/templates/dashboard/dashboard.html', controller: 'DashboardController' })
+       .state('app.dashboard', { url: '/dashboard', parent: 'app', templateUrl: '/templates/app/dashboard/dashboard.html', controller: 'DashboardController' })
 
        .state('app.photo', { url: '/photo', parent: 'app', templateUrl: '/templates/app/photo/photo.html', controller: 'PhotoController' })
        .state('app.pizzeria', { url: '/pizzeria', parent: 'app', templateUrl: '/templates/app/pizzeria/pizzeria.html', controller: 'PizzeriaController' })

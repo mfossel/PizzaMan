@@ -2,6 +2,7 @@
 using PizzaMan.Core.Models;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,12 +19,24 @@ namespace PizzaMan.Core.Domain
         public string PasswordHash { get; set; }
         public string SecurityStamp { get; set; }
 
+        public int NumberOfReviews
+        {
+            get
+            {
+                return Reviews.Count == 0
+                    ? 0
+                    : Reviews.Count;
+            }
+        }
+
         public ICollection<Photo> Photos { get; set; }
         public ICollection<Review> Reviews { get; set; }
 
-        public User() { }
+        public User() {
+            Reviews = new Collection<Review>();
+        }
 
-        public User(UserModel model)
+        public User(UserModel model) : this()
         {
             this.Update(model);
         }
