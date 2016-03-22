@@ -1,4 +1,7 @@
-﻿angular.module('app', ['ngResource', 'ui.router', 'LocalStorageModule', 'angular-input-stars']);
+﻿angular.module('app', ['ngResource', 'ui.router', 'LocalStorageModule', 'angular-input-stars', 'angular-filepicker'])
+    .config(function (filepickerProvider) {
+        filepickerProvider.setKey('AXVtkjb3R6WdcNBUmkN2Tz');
+});;
 
 angular.module('app').value('apiUrl', 'http://localhost:49834/api/');
 
@@ -20,8 +23,9 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider, $http
           .state('home.pizzeria', { url: '/pizzeria', parent: 'home', templateUrl: '/templates/pizzeria/pizzeria.html', controller: 'PizzeriaController' })
           .state('home.review', { url: '/review', parent: 'home', templateUrl: '/templates/review/review.html', controller: 'HomeController' })
                  .state('home.review.pizzeria', { url: '/review/pizzeria=:id', parent: 'home', secure: 'true', templateUrl: '/templates/review/review.pizzeria.html', controller: 'ReviewController' })
-                 .state('home.review.display', { url: '/review/display=:id', parent: 'home', secure: 'true', templateUrl: '/templates/review/review.display.html', controller: 'ReviewDisplayController' });
-
+                 .state('home.review.display', { url: '/review/display=:id', parent: 'home', secure: 'true', templateUrl: '/templates/review/review.display.html', controller: 'ReviewDisplayController' })
+          .state('home.photo', { url: '/photo/id=:id', parent: 'home', templateUrl: '/templates/photo/photo.html', controller: 'PhotoController' })
+    ;
 });
 
 

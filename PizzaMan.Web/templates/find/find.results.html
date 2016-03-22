@@ -3,13 +3,17 @@
 <div class="col-xs-12">
     <div class="box" ng-repeat="pizzeria in pizzerias">
 
-        <div class="info" style="padding-bottom:45px;">
+        <div class="info" style="padding-bottom:25px;">
             <h4>{{pizzeria.PizzeriaName}}</h4>
         </div>
+        <div style="padding-bottom:25px;">
+            <span><img src="../../img/o.jpg" width="200" /></span>
+        </div>
+        <div>
+            <a class="btn  btn-sm btn-success" ng-href="#/home/photo/id={{pizzeria.PizzeriaId}}">Submit a Photo</a>
+        </div>
 
-
-
-        <div class="info" id="pizzeriaStars" style="padding-bottom:25px;">
+        <div class="info" id="pizzeriaStars" style="padding-bottom:25px; padding-top:30px;">
             <input-stars max="5" ng-model="pizzeria.AverageRating" readonly="true"></input-stars>
         </div>
 

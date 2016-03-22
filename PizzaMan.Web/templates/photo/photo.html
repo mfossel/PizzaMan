@@ -1,0 +1,18 @@
+﻿<link href="../../style/photo.css" rel="stylesheet" />
+<div class="container">
+
+
+    <div class="col-xs-12">
+        <div class="box">
+            <div class="info">
+                <h4 class="text-center">{{pizzeria.PizzeriaName}}</h4>
+                <p>Submit a Photo</p>
+                <input filepicker type="filepicker" data-fp-services="computer" on-success="pickResults=event.fpfile" />
+
+                <div>
+                    <a class="btn btn-success" ng-href="#/home/find/name={{pizzeria.PizzeriaName}}">Go Back to Pizzeria</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

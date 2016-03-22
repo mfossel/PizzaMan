@@ -1,14 +1,15 @@
 ﻿
 .box {
     border-radius: 3px;
-    background-color:black;
+    background-color: black;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     padding: 10px 25px;
-    text-align: left;
+    text-align: center;
     display: block;
     margin-top: 60px;
     opacity: .90;
 }
+
 .box-icon {
     border-radius: 50%;
     display: table;
@@ -17,23 +18,23 @@
     width: 100px;
     margin-top: -61px;
 }
-.box-icon span {
-    color: #fff;
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
-}
+
+    .box-icon span {
+        color: #fff;
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+    }
+
 .info h4 {
-    color:whitesmoke;
+    color: whitesmoke;
     text-shadow: 15px 9px 9px 9px #808080;
     padding-left: 10px;
     font-size: 32px;
-    text-align:center;
+    text-align: center;
     font-family: 'Oswald', sans-serif;
     letter-spacing: 2px;
     text-transform: uppercase;
-   
-
 }
 
 .info > a {
@@ -43,12 +44,13 @@
     color: #fff;
     transition: all 0.5s ease 0s;
 }
-.info > a:hover {
-    background-color: #0288d1;
-    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.12);
-    color: #fff;
-    transition: all 0.5s ease 0s;
-}
+
+    .info > a:hover {
+        background-color: #0288d1;
+        box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.12);
+        color: #fff;
+        transition: all 0.5s ease 0s;
+    }
 
 .info > p {
     color: whitesmoke;
@@ -59,21 +61,19 @@
 }
 
 .recentPhoto {
-    height:200px;
-    width:200px;
+    height: 200px;
+    width: 200px;
 }
 
 .pizzeriaParagraph {
-    font-size:larger;
-    color:snow;
-    margin-left:15px;
+    font-size: larger;
+    color: gray;
 }
 
 .pizzeriaHeader {
-    color:white;
-    font-size:x-large;
+    color: white;
+    font-size: x-large;
     text-shadow: 15px 9px 9px 9px #808080;
-    text-decoration:underline;
 }
 
 #pizzeriaStars {
@@ -83,15 +83,15 @@
 #reviews {
     padding-top: 10px;
     padding-bottom: 50px;
-    text-align:center;
+    text-align: center;
 }
 
 #reviewLabel {
-    color:dimgrey;
+    color: dimgrey;
+    margin-bottom: 10px;
 }
 
 #pizzeriaLabel {
-    color:whitesmoke;
-    font-size:large;
-    margin-bottom:10px;
+    color: whitesmoke;
+    font-size: large;
 }
