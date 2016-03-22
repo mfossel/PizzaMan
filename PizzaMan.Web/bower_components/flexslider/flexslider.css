@@ -86,11 +86,8 @@ html[xmlns] .flexslider .slides {
   -moz-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
   -o-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
   box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
-  width:410px;
-  height:410px;
-    margin-left: auto;
-  margin-right: auto;
-  margin-top:40px;
+  margin-left:auto;
+  margin-right:auto;
 }
 .flexslider .slides {
   zoom: 1;

@@ -1,14 +1,20 @@
-﻿<!--<link href="../../style/pizzeria.css" rel="stylesheet" />-->
-<link href="../../style/find.css" rel="stylesheet" />
+﻿<link href="../../style/find.css" rel="stylesheet" />
+<link href="../../bower_components/flexslider/flexslider.css" rel="stylesheet" />
 <div class="col-xs-12">
     <div class="box" ng-repeat="pizzeria in pizzerias">
 
         <div class="info" style="padding-bottom:25px;">
             <h4>{{pizzeria.PizzeriaName}}</h4>
         </div>
-        <div style="padding-bottom:25px;">
-            <span><img src="../../img/o.jpg" width="200" /></span>
+
+        <div>
+            <flex-slider flex-slide="s in mySlides" min-items="2" max-items="2" mousewheel="true" item-width="100px" slideshow="false">
+                <li>
+                    <img id="flex-photo" ng-src="{{s}}">
+                </li>
+            </flex-slider>
         </div>
+
         <div>
             <a class="btn  btn-sm btn-success" ng-href="#/home/photo/id={{pizzeria.PizzeriaId}}">Submit a Photo</a>
         </div>

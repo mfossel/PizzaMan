@@ -76,3 +76,16 @@
     text-align: center;
 }
 
+#flex-photo {
+    height: 200px;
+    width: 200px;
+}
+
+.flexslider {
+  width:205px;
+  height:205px;
+    margin-left: auto;
+  margin-right: auto;
+  margin-top:40px;
+
+}
