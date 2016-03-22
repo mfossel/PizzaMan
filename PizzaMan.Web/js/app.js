@@ -1,4 +1,4 @@
-﻿angular.module('app', ['ngResource', 'ui.router', 'LocalStorageModule', 'angular-input-stars', 'angular-filepicker'])
+﻿angular.module('app', ['ngResource', 'ui.router', 'LocalStorageModule', 'angular-input-stars', 'angular-filepicker', 'angular-flexslider'])
     .config(function (filepickerProvider) {
         filepickerProvider.setKey('AXVtkjb3R6WdcNBUmkN2Tz');
 });;

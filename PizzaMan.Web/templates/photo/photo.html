@@ -1,4 +1,6 @@
 ﻿<link href="../../style/photo.css" rel="stylesheet" />
+<link href="../../bower_components/flexslider/flexslider.css" rel="stylesheet" />
+
 <div class="container">
 
 
@@ -8,6 +10,14 @@
                 <h4 class="text-center">{{pizzeria.PizzeriaName}}</h4>
                 <p>Submit a Photo</p>
                 <input filepicker type="filepicker" data-fp-services="computer" on-success="pickResults=event.fpfile" />
+
+                <div>
+                    <flex-slider flex-slide="s in mySlides" min-items="2" max-items="2" mousewheel="true" item-width="100px" slideshow="false">
+                        <li>
+                            <img id ="flex-photo" ng-src="{{s}}">
+                        </li>
+                    </flex-slider>
+                </div>
 
                 <div>
                     <a class="btn btn-success" ng-href="#/home/find/name={{pizzeria.PizzeriaName}}">Go Back to Pizzeria</a>

@@ -64,3 +64,8 @@
 #slogan {
     text-align: center;
 }
+
+#flex-photo {
+    height: 400px;
+    width: 400px;
+}
