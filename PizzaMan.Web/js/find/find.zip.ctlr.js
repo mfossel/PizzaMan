@@ -5,6 +5,7 @@
     function activate() {
         FindResource.getPizzeriaByZip(zip).then(function (response) {
             $scope.pizzerias = response;
+            $scope.zip = zip;
         });
 
     }

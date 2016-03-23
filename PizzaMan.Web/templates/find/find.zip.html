@@ -1,0 +1,48 @@
+﻿<link href="../../style/tablefind.css" rel="stylesheet" />
+<link href="../../bower_components/bootstrap-star-rating/css/star-rating.css" rel="stylesheet" />
+
+<div class="container">
+
+
+    <div class="col-xs-12">
+        <div class="box">
+
+            <h1>Pizzeria Results for {{zip}}</h1>
+                <table class="table-hover">
+                    <thead>
+                        <tr>
+                            <th style="font-size:large; padding:5px">Pizzeria Name</th>
+                            <th style="font-size:large; padding:5px">Phone Number</th>
+                            <th style="font-size:large; padding:5px">Delivery?</th>
+                            <th style="font-size:large; padding:5px">Sitdown?</th>
+                            <th style="font-size:large; padding:5px">Average Rating</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr ng-repeat="pizzeria in pizzerias | filter:searchPizzeria">
+                            <td style="padding:5px">{{pizzeria.PizzeriaName}}</td>
+                            <td style="padding:5px">{{pizzeria.PhoneNumber}}</td>
+                            <td style="padding:5px">{{pizzeria.Delivery}}</td>
+                            <td style="padding:5px">{{pizzeria.Sitdown}}</td>
+                            <td style="padding:5px">
+                                <div class="info" id="pizzeriaStars">
+                                    <input-stars max="5" ng-model="pizzeria.AverageRating" readonly="true"></input-stars>
+                                </div>
+
+                            </td>
+
+                            <td>
+                                <a class="btn btn-success" ng-href="#/home/find/name={{pizzeria.PizzeriaName}}">Link</a>
+                            </td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+

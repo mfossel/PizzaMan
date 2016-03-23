@@ -43,25 +43,29 @@
     font-family: Nunito;
 }
 
-
-
-.recentPhoto {
-    height: 150px;
-    width: 150px;
+table {
+    padding:10px;
+    width:auto;
+    margin-top:35px;
 }
 
-.text-success {
-    color: white;
-}
-
-#pizzeria-review-label {
-    font-size: large;
-}
-
-.reviewLabel {
+th {
     color:whitesmoke;
+    font-size: xx-large;
+    padding:20px;
 }
 
-#slogan {
-    text-align:center;
+td {
+    padding:20px;
+    margin:10px;
+    color:whitesmoke;
+    font-size:large;
+}
+
+tr:hover td {
+    color:green;
+}
+
+h1 {
+    color:whitesmoke;
 }

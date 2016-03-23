@@ -5,6 +5,7 @@
     function activate() {
         FindResource.getPizzeriaByCity(city).then(function (response) {
             $scope.pizzerias = response;
+            $scope.city = city;
         });
 
     }
