@@ -149,6 +149,11 @@ namespace PizzaMan.API.Controllers
             return _pizzeriaRepository.Any(e => e.PizzeriaId == id);
         }
 
+
+
+
+        //Pizzer Data Functions
+
         // GET: api/Pizzerias/MostReviews
         [Route("api/pizzerias/mostreviews")]
         public IEnumerable<PizzeriaModel> GetPizzeriasMostReviews()
@@ -166,5 +171,45 @@ namespace PizzaMan.API.Controllers
             var highestRated = _pizzeriaRepository.GetAll().OrderByDescending(p => p.AverageRating).Take(5);
             return Mapper.Map<IEnumerable<PizzeriaModel>>(highestRated);
         }
+
+        // GET: api/Pizzerias/Oldest
+        [Route("api/pizzerias/oldest")]
+        public IEnumerable<PizzeriaModel> GetPizzeriasOldest()
+        {
+
+            var oldest = _pizzeriaRepository.GetAll().OrderBy(p => p.YearOpened).Take(5);
+            return Mapper.Map<IEnumerable<PizzeriaModel>>(oldest);
+        }
+
+        // GET: api/Pizzerias/HighestRatedDelivery
+        [Route("api/pizzerias/highestrateddelivery")]
+        public IEnumerable<PizzeriaModel> GetPizzeriasHighestRatedDelivery()
+        {
+
+            var highestRatedDelivery = _pizzeriaRepository.GetAll().Where(p => p.Delivery == true).
+                OrderByDescending(p => p.AverageRating).Take(5);
+            return Mapper.Map<IEnumerable<PizzeriaModel>>(highestRatedDelivery);
+        }
+
+        // GET: api/Pizzerias/HighestRatedSitodwn
+        [Route("api/pizzerias/highestratedsitdown")]
+        public IEnumerable<PizzeriaModel> GetPizzeriasHighestRatedSitdown()
+        {
+
+            var highestRatedSitdown = _pizzeriaRepository.GetAll().Where(p => p.Sitdown == true).
+                OrderByDescending(p => p.AverageRating).Take(5);
+            return Mapper.Map<IEnumerable<PizzeriaModel>>(highestRatedSitdown);
+        }
+
+        // GET: api/Pizzerias/HighestRatedGlutenFree
+        [Route("api/pizzerias/highestratedglutenfree")]
+        public IEnumerable<PizzeriaModel> GetPizzeriasHighestRatedGlutenFree()
+        {
+
+            var highestRatedGlutenFree= _pizzeriaRepository.GetAll().Where(p => p.GlutenFreeOption == true).
+                OrderByDescending(p => p.AverageRating).Take(5);
+            return Mapper.Map<IEnumerable<PizzeriaModel>>(highestRatedGlutenFree);
+        }
+
     }
 }

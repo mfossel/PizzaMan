@@ -13,7 +13,8 @@
         <thead>
             <tr>
                 <th style="font-size:large; padding:5px">Pizzeria Name</th>
-                <th style="font-size:large; padding:5px">Address</th>
+                <th style="font-size:large; padding:5px">City</th>
+                <th style="font-size:large; padding:5px">Zip Code</th>
                 <th style="font-size:large; padding:5px">Phone Number</th>
                 <th style="font-size:large; padding:5px">Year Opened</th>
                 <th style="font-size:large; padding:5px">Average Rating</th>
@@ -25,7 +26,8 @@
 
             <tr ng-repeat="pizzeria in pizzerias | filter:searchPizzeria">
                 <td style="padding:5px">{{pizzeria.PizzeriaName}}</td>
-                <td style="padding:5px">{{pizzeria.City}} {{pizzeria.State}} {{pizzeria.ZipCode}}</td>
+                <td style="padding:5px">{{pizzeria.City}}</td>
+                <td style="padding:5px">{{pizzeria.ZipCode}}</td>
                 <td style="padding:5px">{{pizzeria.PhoneNumber}}</td>
                 <td style="padding:5px">{{pizzeria.YearOpened}}</td>
                 <td style="padding:5px">{{pizzeria.AverageRating}}</td>

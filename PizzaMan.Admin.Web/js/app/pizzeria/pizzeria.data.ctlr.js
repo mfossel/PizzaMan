@@ -13,6 +13,31 @@
 
         });
 
+        PizzeriaDataResource.getPizzeriaHighestRatedDelivery().then(function (response) {
+            $scope.pizzeriaHighestRatedDelivery = response;
+
+
+        });
+
+
+        PizzeriaDataResource.getPizzeriaHighestRatedSitdown().then(function (response) {
+            $scope.pizzeriaHighestRatedSitdown = response;
+
+
+        });
+
+        PizzeriaDataResource.getPizzeriaHighestRatedGlutenFree().then(function (response) {
+            $scope.pizzeriaHighestRatedGlutenFree = response;
+
+
+        });
+
+
+        PizzeriaDataResource.getPizzeriaOldest().then(function (response) {
+            $scope.pizzeriaOldest = response;
+
+
+        });
 
     }
 

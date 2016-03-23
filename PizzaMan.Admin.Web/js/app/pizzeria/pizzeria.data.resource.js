@@ -13,9 +13,41 @@
                     });
     }
 
+    function getPizzeriaHighestRatedDelivery() {
+        return $http.get(apiUrl + 'pizzerias/highestrateddelivery')
+                    .then(function (response) {
+                        return response.data;
+                    });
+    }
+
+    function getPizzeriaHighestRatedSitdown() {
+        return $http.get(apiUrl + 'pizzerias/highestratedsitdown')
+                    .then(function (response) {
+                        return response.data;
+                    });
+    }
+
+    function getPizzeriaHighestRatedGlutenFree() {
+        return $http.get(apiUrl + 'pizzerias/highestratedglutenfree')
+                    .then(function (response) {
+                        return response.data;
+                    });
+    }
+
+    function getPizzeriaOldest() {
+        return $http.get(apiUrl + 'pizzerias/oldest')
+                    .then(function (response) {
+                        return response.data;
+                    });
+    }
+
     return {
         getPizzeriaMostReviews: getPizzeriaMostReviews,
-        getPizzeriaHighestRated: getPizzeriaHighestRated
+        getPizzeriaHighestRated: getPizzeriaHighestRated,
+        getPizzeriaHighestRatedDelivery: getPizzeriaHighestRatedDelivery,
+        getPizzeriaHighestRatedSitdown: getPizzeriaHighestRatedSitdown,
+        getPizzeriaHighestRatedGlutenFree: getPizzeriaHighestRatedGlutenFree,
+        getPizzeriaOldest: getPizzeriaOldest
     };
 
 });
