@@ -71,9 +71,14 @@
 }
 
 .flexslider {
-  width:410px;
-  height:410px;
+    width: 410px;
+    height: 410px;
     margin-left: auto;
-  margin-right: auto;
-  margin-top:40px;
+    margin-right: auto;
+    margin-top: 40px;
+}
+
+.choosefile {
+    margin-left: auto;
+    margin-right: auto;
 }

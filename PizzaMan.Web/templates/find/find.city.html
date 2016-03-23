@@ -15,6 +15,8 @@
                         <th style="font-size:large; padding:5px">Phone Number</th>
                         <th style="font-size:large; padding:5px">Delivery?</th>
                         <th style="font-size:large; padding:5px">Sitdown?</th>
+                        <th style="font-size:large; padding:5px">Vegan options?</th>
+                        <th style="font-size:large; padding:5px">Gluten Free options?</th>
                         <th style="font-size:large; padding:5px">Average Rating</th>
                         <th></th>
                     </tr>
@@ -24,8 +26,27 @@
                     <tr ng-repeat="pizzeria in pizzerias | filter:searchPizzeria">
                         <td style="padding:5px">{{pizzeria.PizzeriaName}}</td>
                         <td style="padding:5px">{{pizzeria.PhoneNumber}}</td>
-                        <td style="padding:5px">{{pizzeria.Delivery}}</td>
-                        <td style="padding:5px">{{pizzeria.Sitdown}}</td>
+                        <td style="padding:5px">
+                            <span ng-show="{{pizzeria.Delivery}}">
+                                <i class="fa fa-check-square"></i>
+                            </span>
+                        </td>
+                        <td style="padding:5px">
+                            <span ng-show="{{pizzeria.Sitdown}}">
+                                <i class="fa fa-check-square"></i>
+                            </span>
+                        </td>
+                        <td style="padding:5px">
+                            <span ng-show="{{pizzeria.VeganOption}}">
+                                <i class="fa fa-check-square"></i>
+                            </span>
+                        </td>
+                        <td style="padding:5px">
+                            <span ng-show="{{pizzeria.GlutenFreeOption}}">
+                                <i class="fa fa-check-square"></i>
+                            </span>
+                        </td>
+
                         <td style="padding:5px">
                             <div class="info" id="pizzeriaStars">
                                 <input-stars max="5" ng-model="pizzeria.AverageRating" readonly="true"></input-stars>

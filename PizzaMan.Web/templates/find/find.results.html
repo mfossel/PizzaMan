@@ -56,33 +56,50 @@
         </div>
 
         <div style="padding-bottom:15px;">
-            <p class="pizzeriaHeader">Offers Takeour?</p>
-            <p class="pizzeriaParagraph">{{pizzeria.Takeout}}</p>
+            <p class="pizzeriaHeader">Offers Takeout?</p>
+            <p class="pizzeriaParagraph">
+                <span ng-show="{{pizzeria.Takeout}}">Yes</span>
+            </p>
         </div>
 
         <div style="padding-bottom:15px;">
             <p class="pizzeriaHeader">Offers Delivery?</p>
-            <p class="pizzeriaParagraph">{{pizzeria.Delivery}}</p>
+            <p class="pizzeriaParagraph">
+                <span ng-show="{{pizzeria.Delivery}}">Yes</span>
+                <span ng-hide"{{pizzeria.Delivery}}">No</span>
+            </p>
         </div>
 
         <div style="padding-bottom:15px;">
             <p class="pizzeriaHeader">Offers Sitdown Dining?</p>
-            <p class="pizzeriaParagraph">{{pizzeria.Sitdown}}</p>
+            <p class="pizzeriaParagraph">
+                <span ng-show="{{pizzeria.Sitdown}}">Yes</span>
+                <span ng-hide="{{pizzeria.Sitdown}}">No</span>
+            </p>
         </div>
 
         <div style="padding-bottom:15px;">
             <p class="pizzeriaHeader">Serves Alcohol?</p>
-            <p class="pizzeriaParagraph">{{pizzeria.Alcohol}}</p>
+            <p class="pizzeriaParagraph">
+                <span ng-show="{{pizzeria.Alcohol}}">Yes</span>
+                <span ng-hide"{{pizzeria.Alcohol}}">No</span>
+            </p>
         </div>
 
         <div style="padding-bottom:15px;">
             <p class="pizzeriaHeader">Offers Gluten-free Crust?</p>
-            <p class="pizzeriaParagraph">{{pizzeria.GlutenFreeOption}}</p>
+            <p class="pizzeriaParagraph">
+                <span ng-show="{{pizzeria.GlutenFreeOption}}">Yes</span>
+                <span ng-hide"{{pizzeria.GlutenFreeOption}}">No</span>
+            </p>
         </div>
 
         <div style="padding-bottom:15px;">
             <p class="pizzeriaHeader">Offers Vegan Options?</p>
-            <p class="pizzeriaParagraph">{{pizzeria.VeganOption}}</p>
+            <p class="pizzeriaParagraph">
+                <span ng-show="{{pizzeria.VeganOption}}">Yes</span>
+                <span ng-hide"{{pizzeria.VeganOption}}">No</span>
+            </p>
         </div>
 
         <div style="text-align:center; padding-bottom:15px;">

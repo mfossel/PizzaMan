@@ -9,7 +9,12 @@
             <div class="info">
                 <h4 class="text-center">{{pizzeria.PizzeriaName}}</h4>
                 <p>Submit a Photo</p>
-                <input filepicker type="filepicker" data-fp-services="computer" on-success="pickResults=event.fpfile" />
+
+                <div >
+                    <form method="post" action="UploadImage" enctype="multipart/form-data">
+                         <input class="choosefile" type="file" name="file" id="file" />
+                    </form>
+                </div>
 
                 <div style="margin-top:25px;">
                     <flex-slider flex-slide="s in mySlides" min-items="2" max-items="2" mousewheel="true" item-width="100px" slideshow="false">

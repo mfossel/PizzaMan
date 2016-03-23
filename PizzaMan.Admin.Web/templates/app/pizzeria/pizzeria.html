@@ -33,7 +33,7 @@
                 <td style="padding:5px">{{pizzeria.AverageRating}}</td>
                 <td style="padding:5px">{{pizzeria.NumberOfReviews}}</td>
                 <td>
-                    <a class="btn btn-default" ng-href="#/app/leases/detail/{{lease.LeaseId}}">Edit</a>
+                    <a class="btn btn-default" ng-href="#/app/pizzeria/edit/id={{pizzeria.PizzeriaId}}">Edit</a>
                     <a class="btn btn-danger" ng-click="deletePizzeria(pizzeria)">Delete</a>
                 </td>
             </tr>

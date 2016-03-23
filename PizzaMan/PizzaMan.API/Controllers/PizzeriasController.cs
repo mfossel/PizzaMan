@@ -47,30 +47,8 @@ namespace PizzaMan.API.Controllers
             return Ok(Mapper.Map<PizzeriaModel>(pizzeria));
         }
 
-        // GET: api/Pizzerias/ZipCode
-        [Route("api/pizzerias/zip={zip}")]
-        public IEnumerable<PizzeriaModel> GetPizzeriasByZipCode(string zip)
-        {
-            return Mapper.Map<IEnumerable<PizzeriaModel>>(_pizzeriaRepository.GetWhere(p => p.ZipCode == zip));
-        }
-
-        // GET: api/Pizzerias/City
-        [Route("api/pizzerias/city={city}")]
-        public IEnumerable<PizzeriaModel> GetPizzeriasByCity(string city)
-        {
-            return Mapper.Map<IEnumerable<PizzeriaModel>>(_pizzeriaRepository.GetWhere(p => p.City == city));
-        }
-
-        // GET: api/Pizzerias/Name
-
-        [Route("api/pizzerias/name={name}")]
-        public IEnumerable<PizzeriaModel> GetPizzeriasByName(string name)
-        {
-            return Mapper.Map<IEnumerable<PizzeriaModel>>(_pizzeriaRepository.GetWhere(p => p.PizzeriaName == name));
-        }
-
         // PUT: api/Pizzerias/5
-        [Authorize]
+        //[Authorize]
         [ResponseType(typeof(void))]
         public IHttpActionResult PutPizzeria(int id, PizzeriaModel pizzeria)
         {
@@ -150,6 +128,30 @@ namespace PizzaMan.API.Controllers
         }
 
 
+        //Pizzeria Custom Functions
+
+        // GET: api/Pizzerias/ZipCode
+        [Route("api/pizzerias/zip={zip}")]
+        public IEnumerable<PizzeriaModel> GetPizzeriasByZipCode(string zip)
+        {
+            return Mapper.Map<IEnumerable<PizzeriaModel>>(_pizzeriaRepository.GetWhere(p => p.ZipCode == zip));
+        }
+
+        // GET: api/Pizzerias/City
+        [Route("api/pizzerias/city={city}")]
+        public IEnumerable<PizzeriaModel> GetPizzeriasByCity(string city)
+        {
+            return Mapper.Map<IEnumerable<PizzeriaModel>>(_pizzeriaRepository.GetWhere(p => p.City == city));
+        }
+
+        // GET: api/Pizzerias/Name
+
+        [Route("api/pizzerias/name={name}")]
+        public IEnumerable<PizzeriaModel> GetPizzeriasByName(string name)
+        {
+            return Mapper.Map<IEnumerable<PizzeriaModel>>(_pizzeriaRepository.GetWhere(p => p.PizzeriaName == name));
+        }
+        
 
 
         //Pizzer Data Functions

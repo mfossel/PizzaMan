@@ -1,0 +1,102 @@
+﻿  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+      
+            <div class="form-group">
+                <label class="pull-left text-success">Pizzeria Name</label>
+                <input type="text" class="form-control" placeholder="Enter name of Pizzeria" ng-model="pizzeria.PizzeriaName">
+            </div>
+
+            <div class="form-group">
+                <label class="pull-left text-success">Street Address</label>
+                <input type="text" class="form-control" placeholder="Enter street address" ng-model="pizzeria.Address">
+            </div>
+
+            <div class="form-group">
+                <label class="pull-left text-success">City</label>
+                <input type="text" class="form-control" placeholder="Enter city" ng-model="pizzeria.City">
+            </div>
+
+            <div class="form-group">
+                <label class="pull-left text-success">State</label>
+                <input type="text" class="form-control" placeholder="Enter state" ng-model="pizzeria.State">
+            </div>
+
+            <div class="form-group">
+                <label class="pull-left text-success">Zip Code</label>
+                <input type="text" class="form-control" placeholder="Enter zip code" ng-model="pizzeria.ZipCode">
+            </div>
+
+            <div class="form-group">
+                <label class="pull-left text-success">Year Opened</label>
+                <input type="text" class="form-control" placeholder="Enter year opened" ng-model="pizzeria.YearOpened">
+            </div>
+
+            <div class="form-group">
+                <label class="pull-left text-success">Phone Number</label>
+                <input type="text" class="form-control" placeholder="Enter phone number" ng-model="pizzeria.PhoneNumber">
+            </div>
+
+    </div>
+
+
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+
+
+            <div class="form-group">
+                <label class="pull-left text-success">Style of pizza</label>
+                <input type="text" class="form-control" placeholder="Ex. New York, Chicago, American, Italian..." ng-model="pizzeria.Style">
+            </div>
+
+            <div class="form-group">
+                <label class="pull-left text-success">Menu URL</label>
+                <input type="text" class="form-control" placeholder="Enter a URL for the menu if available..." ng-model="pizzeria.MenuURL">
+            </div>
+
+            <div class="form-group">
+                <label class="pull-left text-success">Description</label>
+                <textarea id="inputTextMessage" class="form-control" placeholder="Enter a brief description of the pizzeria" style="height:107px; resize:none;" ng-model="pizzeria.Description"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label class="pull-left text-success">Offers takeout?</label>
+                <input type="checkbox" aria-label="..." ng-model="pizzeria.Takeout">
+            </div>
+
+            <div class="form-group">
+                <label class="pull-left text-success">Offers delivery?</label>
+                <input type="checkbox" aria-label="..." ng-model="pizzeria.Delivery" />
+            </div>        
+
+            <div class="form-group">
+                <label class="pull-left text-success">Offers sitdown dining?</label>
+                <input type="checkbox" aria-label="..." ng-model="pizzeria.Sitdown">
+            </div>
+
+            <div class="form-group">
+                <label class="pull-left text-success">Serves Alcohol?</label>
+                <input type="checkbox" aria-label="..." ng-model="pizzeria.Alcohol">
+            </div>
+
+            <div class="form-group">
+                <label class="pull-left text-success">Offers gluten-free crust?</label>
+                <input type="checkbox" aria-label="..." ng-model="pizzeria.GlutenFreeOption" />
+            </div>
+
+            <div class="form-group">
+                <label class="pull-left text-success">Offers vegan options?</label>
+                <input type="checkbox" aria-label="..." ng-model="pizzeria.VeganOption" />
+            </div>        
+
+
+
+
+    </div>
+
+
+
+    <div class="container">
+        <div class="col-xs-12" style="margin-top:30px; margin-bottom:30px;">
+            <button class="btn btn-success center-block" ng-click="savePizzeria(pizzeria)">Submit Edits</button>
+        </div>
+
+
+    </div>
