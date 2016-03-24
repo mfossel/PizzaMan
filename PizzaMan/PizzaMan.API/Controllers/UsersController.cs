@@ -132,5 +132,14 @@ namespace PizzaMan.API.Controllers
             var mostReviews = _userRepository.GetAll().OrderByDescending(u => u.NumberOfReviews).Take(5);
             return Mapper.Map<IEnumerable<UserModel>>(mostReviews);
         }
+
+        //Get: Count
+        [Route("api/users/count")]
+        public int GetUsersCount()
+        {
+
+            return _userRepository.Count();
+        }
+
     }
 }

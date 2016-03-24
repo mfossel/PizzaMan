@@ -60,4 +60,69 @@
         </div>
 
     </div>
+
+    <div class="row">
+        <div class="col-lg-5">
+            <h2>Oldest Pizzerias</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered table-condensed">
+                    <thead>
+
+                        <tr>
+                            <th class="success" style="font-size:large; padding:5px">Pizzeria Name</th>
+                            <th class="success" style="font-size:large; padding:5px">Zip Code</th>
+                            <th class="success" style="font-size:large; padding:5px">Average Rating</th>
+                            <th class="success" style="font-size:large; padding:5px">Year Opened</th>
+                        </tr>
+
+                    </thead>
+                    <tbody>
+
+                        <tr ng-repeat="pizzeria in pizzeriaOldest">
+                            <td style="padding:5px">{{pizzeria.PizzeriaName}}</td>
+                            <td style="padding:5px">{{pizzeria.ZipCode}}</td>
+                            <td style="padding:5px">{{pizzeria.AverageRating}}</td>
+                            <td class="active" style="padding:5px">{{pizzeria.YearOpened}}</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+        <div class="col-lg-5 col-lg-offset-1">
+            <h2>Highest Rated Delivery</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered table-condensed">
+                    <thead>
+
+                        <tr>
+                            <th class="success" style="font-size:large; padding:5px">Pizzeria Name</th>
+                            <th class="success" style="font-size:large; padding:5px">Zip Code</th>
+                            <th class="success" style="font-size:large; padding:5px">Average Rating</th>
+                            <th class="success" style="font-size:large; padding:5px">Number of Reviews</th>
+                        </tr>
+
+                    </thead>
+                    <tbody>
+
+                        <tr ng-repeat="pizzeria in pizzeriaHighestRatedDelivery">
+                            <td style="padding:5px">{{pizzeria.PizzeriaName}}</td>
+                            <td style="padding:5px">{{pizzeria.ZipCode}}</td>
+                            <td class="active" style="padding:5px">{{pizzeria.AverageRating}}</td>
+                            <td style="padding:5px">{{pizzeria.NumberOfReviews}}</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
     </div>

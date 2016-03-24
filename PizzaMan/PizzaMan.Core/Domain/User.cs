@@ -29,8 +29,8 @@ namespace PizzaMan.Core.Domain
             }
         }
 
-        public ICollection<Photo> Photos { get; set; }
-        public ICollection<Review> Reviews { get; set; }
+        public virtual ICollection<Photo> Photos { get; set; }
+        public virtual ICollection<Review> Reviews { get; set; }
 
         public User() {
             Reviews = new Collection<Review>();

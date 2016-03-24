@@ -4,5 +4,13 @@
         $scope.reviews = ReviewResource.query();
     }
 
+    $scope.deleteReview = function (review) {
+        review.$remove(function (data) {
+            activate();
+        })
+
+    };
+
+
     activate();
 });

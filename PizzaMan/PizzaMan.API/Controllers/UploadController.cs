@@ -2,6 +2,8 @@
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Blob;
 using PizzaMan.API.Infrastructure;
+using PizzaMan.Core.Infrastructure;
+using PizzaMan.Core.Repository;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -25,8 +27,8 @@ namespace PizzaMan.API.Controllers
             {
                 if (!String.IsNullOrWhiteSpace(contentDisposition.FileName))
                 {
-                    string connectionString = ConfigurationManager.AppSettings["DefaultEndpointsProtocol=https;AccountName=pizzamanphoto;AccountKey=PzCVthOr26wxzntaP5ZDROo4kEhCYHvBl6V9fnl/aR00/4IaXcOtQBSNhJU79tCdWvgtJrKUPmb5HJgabSDvJQ==;BlobEndpoint=https://pizzamanphoto.blob.core.windows.net/;TableEndpoint=https://pizzamanphoto.table.core.windows.net/;QueueEndpoint=https://pizzamanphoto.queue.core.windows.net/;FileEndpoint=https://pizzamanphoto.file.core.windows.net/"];
-                    string containerName = ConfigurationManager.AppSettings["pizzeriaphotos"];
+                    string connectionString = ConfigurationManager.AppSettings["CloudStorageConnectionString"];
+                    string containerName = ConfigurationManager.AppSettings["PizzeriaPhotoContainerName"];
                     CloudStorageAccount storageAccount = CloudStorageAccount.Parse(connectionString);
                     CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
                     CloudBlobContainer blobContainer = blobClient.GetContainerReference(containerName);
@@ -39,10 +41,22 @@ namespace PizzaMan.API.Controllers
         }
     }
 
-    public class ImageUploadController : ApiController
+    public class ImageUploadController : BaseApiController 
     {
-        [Route("api/photo/upload")]
-        public async Task<HttpResponseMessage> PostFormData()
+        private readonly IPhotoRepository _photoRepository;
+        private readonly IUnitOfWork _unitOfWork;
+
+        public ImageUploadController(IPhotoRepository photoRepository, IUnitOfWork unitOfWork, IUserRepository userRepository) : base(userRepository)
+        {
+            _photoRepository = photoRepository;
+            _unitOfWork = unitOfWork;
+        }
+
+
+
+
+        [Route("api/upload/pizzeriaPhoto/{pizzeriaId}")]
+        public async Task<HttpResponseMessage> UploadPizzeriaPhoto(int pizzeriaId)
         {
             if (!Request.Content.IsMimeMultipartContent())
             {
@@ -53,7 +67,17 @@ namespace PizzaMan.API.Controllers
             {
                 MultipartStreamProvider provider = new BlobStorageMultipartStreamProvider();
                 await Request.Content.ReadAsMultipartAsync(provider);
+
+                _photoRepository.Add(new Core.Domain.Photo
+                {
+                    PizzeriaId = pizzeriaId,
+                    UserId = CurrentUser.Id,
+                    
+                    // PhotoUrl = ?? How to set this ??
+
+                });
             }
+
             catch (Exception)
             {
                 throw new HttpResponseException(HttpStatusCode.InternalServerError);

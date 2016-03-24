@@ -4,6 +4,13 @@
         $scope.pizzerias = PizzeriaResource.query();
     }
 
+    $scope.deletePizzeria = function (review) {
+        pizzeria.$remove(function (data) {
+            activate();
+        })
+
+    };
+
     activate();
 
 });

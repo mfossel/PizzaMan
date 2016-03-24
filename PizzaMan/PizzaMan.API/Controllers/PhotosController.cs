@@ -124,5 +124,14 @@ namespace PizzaMan.API.Controllers
         {
             return _photoRepository.Any(e => e.PhotoId == id);
         }
+
+        //Get: Count
+        [Route("api/photos/count")]
+        public int GetPhotosCount()
+        {
+
+            return _photoRepository.Count();
+        }
+
     }
 }

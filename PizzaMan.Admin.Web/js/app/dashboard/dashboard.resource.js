@@ -1,9 +1,38 @@
-﻿angular.module('app').factory('DashboardResource', function (apiUrl, $resource) {
-    return $resource(apiUrl + 'reviews/:reviewId', { submissionId: '@ReviewId' },
-    {
-        'update': {
-            method: 'PUT'
-        }
-    });
+﻿angular.module('app').factory('DashboardResource', function (apiUrl, $http) {
+    function getPizzeriasCount() {
+        return $http.get(apiUrl + 'pizzerias/count')
+                    .then(function (response) {
+                        return response.data;
+                    });
+    }
+
+    function getPhotosCount() {
+        return $http.get(apiUrl + 'photos/count')
+                    .then(function (response) {
+                        return response.data;
+                    });
+    }
+
+    function getUsersCount() {
+        return $http.get(apiUrl + 'users/count')
+                    .then(function (response) {
+                        return response.data;
+                    });
+    }
+
+    function getReviewsCount() {
+        return $http.get(apiUrl + 'reviews/count')
+                    .then(function (response) {
+                        return response.data;
+                    });
+    }
+
+    return {
+        getPizzeriasCount: getPizzeriasCount,
+        getPhotosCount: getPhotosCount,
+        getReviewsCount: getReviewsCount,
+        getUsersCount: getUsersCount
+    };
 
 });
+

@@ -153,5 +153,14 @@ namespace PizzaMan.API.Controllers
         {
             return _reviewRepository.Any(e => e.ReviewId == id);
         }
+
+        //Get: Count
+        [Route("api/reviews/count")]
+        public int GetReviewsCount()
+        {
+
+            return _reviewRepository.Count();
+        }
+
     }
 }

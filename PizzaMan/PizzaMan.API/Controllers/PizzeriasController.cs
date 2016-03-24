@@ -213,5 +213,13 @@ namespace PizzaMan.API.Controllers
             return Mapper.Map<IEnumerable<PizzeriaModel>>(highestRatedGlutenFree);
         }
 
+        //Get: Count
+        [Route("api/pizzerias/count")]
+        public int GetPizzeriasCount()
+        {
+
+            return _pizzeriaRepository.Count();
+        }
+
     }
 }

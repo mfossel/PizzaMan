@@ -11,9 +11,8 @@
                 <p>Submit a Photo</p>
 
                 <div >
-                    <form method="post" action="UploadImage" enctype="multipart/form-data">
-                         <input class="choosefile" type="file" name="file" id="file" />
-                    </form>
+                    <input type="file" file-model="pizzeriaPhoto" />
+                    <button ng-click="uploadPhoto()" class="btn btn-primary"><i class="fa fa-upload"></i> Upload Photo</button>
                 </div>
 
                 <div style="margin-top:25px;">

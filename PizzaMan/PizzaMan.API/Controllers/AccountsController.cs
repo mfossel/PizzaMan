@@ -19,7 +19,7 @@ namespace PizzaMan.API.Controllers
         private readonly IAuthorizationRepository _authRepository;
         private readonly IUnitOfWork _unitOfWork;
 
-        public AccountsController(IAuthorizationRepository authRepository, IUserRepository wingmanUserRepository, IUnitOfWork unitOfWork) : base(wingmanUserRepository)
+        public AccountsController(IAuthorizationRepository authRepository, IUserRepository userRepository, IUnitOfWork unitOfWork) : base(userRepository)
         {
             _authRepository = authRepository;
             _unitOfWork = unitOfWork;

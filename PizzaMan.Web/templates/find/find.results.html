@@ -59,6 +59,7 @@
             <p class="pizzeriaHeader">Offers Takeout?</p>
             <p class="pizzeriaParagraph">
                 <span ng-show="{{pizzeria.Takeout}}">Yes</span>
+                <span ng-hide="{{pizzeria.Delivery}}">No</span>
             </p>
         </div>
 
@@ -66,7 +67,7 @@
             <p class="pizzeriaHeader">Offers Delivery?</p>
             <p class="pizzeriaParagraph">
                 <span ng-show="{{pizzeria.Delivery}}">Yes</span>
-                <span ng-hide"{{pizzeria.Delivery}}">No</span>
+                <span ng-hide="{{pizzeria.Delivery}}">No</span>
             </p>
         </div>
 
