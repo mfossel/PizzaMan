@@ -7,6 +7,12 @@
 
         });
 
+        UserDataResource.getUsersMostPhotos().then(function (response) {
+            $scope.usersMostPhotos = response;
+
+
+        });
+
 
     }
 

@@ -6,8 +6,16 @@
                     });
     }
 
+    function getUsersMostPhotos() {
+        return $http.get(apiUrl + 'users/mostphotos')
+                    .then(function (response) {
+                        return response.data;
+                    });
+    }
+
     return {
-       getUsersMostReviews: getUsersMostReviews
+        getUsersMostReviews: getUsersMostReviews,
+        getUsersMostPhotos: getUsersMostPhotos
     };
 
 });

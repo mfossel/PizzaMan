@@ -16,7 +16,7 @@ namespace PizzaMan.Core.Domain
         public string UserName { get; set; }
         public string ZipCode { get; set; }
 
-        //TOTO: Remove security risk
+        //TODO: Remove security risk
         public string PasswordHash { get; set; }
         public string SecurityStamp { get; set; }
 
@@ -30,11 +30,22 @@ namespace PizzaMan.Core.Domain
             }
         }
 
+        public int NumberOfPhotos
+        {
+            get
+            {
+                return Photos.Count == 0
+                    ? 0
+                    : Photos.Count;
+            }
+        }
+
         public virtual ICollection<Photo> Photos { get; set; }
         public virtual ICollection<Review> Reviews { get; set; }
 
         public User() {
             Reviews = new Collection<Review>();
+            Photos = new Collection<Photo>();
         }
 
         public User(UserModel model) : this()

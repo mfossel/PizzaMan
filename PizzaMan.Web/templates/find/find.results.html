@@ -1,7 +1,7 @@
 ﻿<link href="../../style/find.css" rel="stylesheet" />
 <link href="../../bower_components/flexslider/flexslider.css" rel="stylesheet" />
 <div class="col-xs-12">
-    <div class="box" ng-repeat="pizzeria in pizzerias">
+    <div class="box" ng-repeat="pizzeria in pizzerias| orderBy: '-AverageRating'">
 
         <div class="info" style="padding-bottom:25px;">
             <h4>{{pizzeria.PizzeriaName}}</h4>

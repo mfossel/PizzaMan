@@ -125,6 +125,8 @@ namespace PizzaMan.API.Controllers
             return _userRepository.Any(e => e.Id == id);
         }
 
+        //Admin query functions
+
         // GET: api/Users/MostReviews
         [Route("api/users/mostreviews")]
         public IEnumerable<UserModel> GetUsersMostReviews()
@@ -132,6 +134,19 @@ namespace PizzaMan.API.Controllers
             var mostReviews = _userRepository.GetAll().OrderByDescending(u => u.NumberOfReviews).Take(5);
             return Mapper.Map<IEnumerable<UserModel>>(mostReviews);
         }
+
+        // GET: api/Users/MostPhotos
+        [Route("api/users/mostphotos")]
+        public IEnumerable<UserModel> GetUsersMostPhotos()
+        {
+            var mostPhotos = _userRepository.GetAll().OrderByDescending(u => u.NumberOfPhotos).Take(5);
+            return Mapper.Map<IEnumerable<UserModel>>(mostPhotos);
+        }
+
+
+
+
+
 
         //Get: Count
         [Route("api/users/count")]
