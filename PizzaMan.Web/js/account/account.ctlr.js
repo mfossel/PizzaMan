@@ -21,12 +21,12 @@
     $scope.register = function () {
         AuthenticationService.register($scope.registration).then(
             function (response) {
-                alert("Registration complete.");
+                toastr.success("Registration complete.");
                 $scope.registration = {};
                 location.replace('/#/home/login');
             },
             function (error) {
-                alert("Failed to register");
+                toastr.error("Failed to register");
             }
         )
     };

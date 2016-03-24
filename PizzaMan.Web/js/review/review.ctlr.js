@@ -9,7 +9,7 @@
     $scope.createReview = function () {
         ReviewResource.save($scope.newReview, function () {
             $scope.newReview = {};
-            alert('Review Added');
+            toastr.success('Review Added');
             location.replace('#/home/find/name=' +  $scope.pizzeria.PizzeriaName);
         });
     };

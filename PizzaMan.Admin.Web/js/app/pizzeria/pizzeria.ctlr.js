@@ -7,8 +7,9 @@
     $scope.deletePizzeria = function (review) {
         pizzeria.$remove(function (data) {
             activate();
+            toastr.success('Pizzeria Deleted')
         })
-
+        
     };
 
     activate();

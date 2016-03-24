@@ -6,7 +6,7 @@
 
     $scope.savePizzeria = function () {
         $scope.pizzeria.$update(function () {
-            alert('save successful')
+            toastr.success('Pizzeria Saved Succesfully');
         }
           );
     }

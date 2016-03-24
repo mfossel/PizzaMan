@@ -3,7 +3,7 @@
     $scope.createPizzeria = function () {
         PizzeriaResource.save($scope.newPizzeria, function () {
             $scope.newPizzeria = {};
-            alert('Pizzeria Added');
+            toastr.success('Pizzeria Added');
         });
     };
 

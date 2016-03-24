@@ -23,7 +23,7 @@
                 </thead>
                 <tbody>
 
-                    <tr ng-repeat="pizzeria in pizzerias | filter:searchPizzeria">
+                    <tr ng-repeat="pizzeria in pizzerias | orderBy: '-AverageRating'">
                         <td style="padding:5px">{{pizzeria.PizzeriaName}}</td>
                         <td style="padding:5px">{{pizzeria.PhoneNumber}}</td>
                         <td style="padding:5px">

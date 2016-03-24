@@ -16,6 +16,7 @@ namespace PizzaMan.Core.Domain
         public string UserName { get; set; }
         public string ZipCode { get; set; }
 
+        //TOTO: Remove security risk
         public string PasswordHash { get; set; }
         public string SecurityStamp { get; set; }
 

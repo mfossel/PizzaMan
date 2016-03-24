@@ -37,7 +37,7 @@
             </div>
 
 
-            <div id="reviews" ng-repeat="review in reviews">
+            <div id="reviews" ng-repeat="review in reviews | orderBy: '-OverallRating'">
                 <div id="pizzeriaIcon">
                     
                     <label id="pizzeriaLabel">{{review.Pizzeria.PizzeriaName}}</label>

@@ -7,8 +7,9 @@
     $scope.deleteReview = function (review) {
         review.$remove(function (data) {
             activate();
+            toastr.success('Review Deleted');
         })
-
+        
     };
 
 

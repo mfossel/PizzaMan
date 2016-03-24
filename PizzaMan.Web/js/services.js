@@ -7,9 +7,10 @@
             headers: { 'Content-Type': undefined }
         })
         .success(function () {
-            alert('photo successfully uploaded');
+            toastr.success('Photo successfully uploaded!');
         })
         .error(function () {
+            toastr.error('Error uploading')
         });
     }
 }]);
