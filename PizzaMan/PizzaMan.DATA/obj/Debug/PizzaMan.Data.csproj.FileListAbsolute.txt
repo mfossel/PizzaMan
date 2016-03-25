@@ -33,3 +33,4 @@ C:\dev\origin\PizzaMan\PizzaMan\PizzaMan.DATA\obj\Debug\PizzaMan.Data.csproj.Gen
 C:\dev\origin\PizzaMan\PizzaMan\PizzaMan.DATA\obj\Debug\PizzaMan.DATA.Migrations.second.resources
 C:\dev\origin\PizzaMan\PizzaMan\PizzaMan.DATA\obj\Debug\PizzaMan.DATA.Migrations.second1.resources
 C:\dev\origin\PizzaMan\PizzaMan\PizzaMan.DATA\obj\Debug\PizzaMan.DATA.Migrations.update3.resources
+C:\dev\origin\PizzaMan\PizzaMan\PizzaMan.DATA\obj\Debug\PizzaMan.DATA.Migrations.removedlikes.resources

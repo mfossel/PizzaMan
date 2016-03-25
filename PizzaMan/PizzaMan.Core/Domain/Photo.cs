@@ -13,7 +13,6 @@ namespace PizzaMan.Core.Domain
         public string UserId { get; set; }
         public int PizzeriaId { get; set; }
         public string PhotoURL { get; set; }
-        public int NumberOfLikes { get; set; }
 
         public Pizzeria Pizzeria { get; set; }
         public User User { get; set; }
@@ -31,7 +30,6 @@ namespace PizzaMan.Core.Domain
             UserId = model.UserId;
             PizzeriaId = model.PizzeriaId;
             PhotoURL = model.PhotoURL;
-            NumberOfLikes = model.NumberOfLikes;
         }
     }
 }

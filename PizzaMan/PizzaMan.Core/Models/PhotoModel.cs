@@ -12,6 +12,6 @@ namespace PizzaMan.Core.Models
         public string UserId { get; set; }
         public int PizzeriaId { get; set; }
         public string PhotoURL { get; set; }
-        public int NumberOfLikes { get; set; }
+
     }
 }
