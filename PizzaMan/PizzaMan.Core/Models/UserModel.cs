@@ -14,8 +14,6 @@ namespace PizzaMan.Core.Models
         public string UserName { get; set; }
         public string ZipCode { get; set; }
 
-        public string PasswordHash { get; set; }
-        public string SecurityStamp { get; set; }
         public int NumberOfReviews { get; set; }
         public int NumberOfPhotos { get; set; }
     }

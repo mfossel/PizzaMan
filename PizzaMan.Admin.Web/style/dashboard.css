@@ -19,3 +19,10 @@ p {
 .center {
     text-align:center;
 }
+
+.recent {
+    height:300px;
+    width:auto;
+    margin-top:25px;
+    margin-bottom:50px;
+}

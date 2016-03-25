@@ -41,7 +41,7 @@ namespace PizzaMan.API.Controllers
         }
     }
 
-    public class ImageUploadController : BaseApiController 
+    public class ImageUploadController : BaseApiController
     {
         private readonly IPhotoRepository _photoRepository;
         private readonly IUnitOfWork _unitOfWork;
@@ -72,7 +72,7 @@ namespace PizzaMan.API.Controllers
                 {
                     PizzeriaId = pizzeriaId,
                     UserId = CurrentUser.Id,
-                    
+
                     // PhotoUrl = ?? How to set this ??
 
                 });
@@ -86,6 +86,7 @@ namespace PizzaMan.API.Controllers
             return new HttpResponseMessage(HttpStatusCode.OK);
         }
     }
+
 }
 
 
