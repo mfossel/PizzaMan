@@ -19,7 +19,6 @@
                 <th style="font-size:large; padding:5px">Year Opened</th>
                 <th style="font-size:large; padding:5px">Average Rating</th>
                 <th style="font-size:large; padding:5px">Number of Reviews</th>
-                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -33,8 +32,8 @@
                 <td style="padding:5px">{{pizzeria.AverageRating}}</td>
                 <td style="padding:5px">{{pizzeria.NumberOfReviews}}</td>
                 <td>
-                    <a class="btn btn-default" ng-href="#/app/pizzeria/edit/id={{pizzeria.PizzeriaId}}">Edit</a>
-                    <a class="btn btn-danger" ng-click="deletePizzeria(pizzeria)">Delete</a>
+                    <a class="btn btn-default" ng-href="#/app/pizzeria/edit/id={{pizzeria.PizzeriaId}}">Edit  <i class="fa fa-pencil-square-o"></i></a>
+                    <a class="btn btn-danger" ng-click="deletePizzeria(pizzeria)">Delete  <i class="fa fa-times"></i></a>
                 </td>
             </tr>
 

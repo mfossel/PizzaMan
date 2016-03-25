@@ -15,7 +15,6 @@
                 <th style="font-size:large; padding:5px">User Name</th>
                 <th style="font-size:large; padding:5px">Pizzeria Name</th>
                 <th style="font-size:large; padding:5px">Overall Rating</th>
-                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -25,7 +24,7 @@
                 <td style="padding:5px">{{review.Pizzeria.PizzeriaName}}</td>
                 <td style="padding:5px">{{review.OverallRating | number:1}}</td>
                 <td>
-                    <a class="btn btn-danger" ng-click="deleteReview(review)">Delete</a>
+                    <a class="btn btn-danger" ng-click="deleteReview(review)">Delete  <i class="fa fa-times"></i></a>
                 </td>
             </tr>
 
