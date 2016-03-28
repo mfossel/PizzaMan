@@ -1,9 +1,69 @@
 ﻿<link href="../../../style/data.display.css" rel="stylesheet" />
+<link href="../../../style/dashboard.css" rel="stylesheet" />
 
 <div class="container">
         <label id="data-header">Pizzeria Data</label>
  
     <div class="row">
+
+        <div class="col-lg-5">
+            <div class="system-data">
+                <div>
+                    <h4>Average Number of Reviews for Each Pizzeria</h4>
+                    <p>{{avgNumReviews| number : 2}}</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-lg-5 col-lg-offset-1">
+            <div class="system-data">
+                <div>
+                    <h4>Average Overall Rating for Each Pizzeria</h4>
+                    <p>{{avgRating| number : 2}}</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-lg-5">
+            <div class="system-data">
+                <div>
+                    <h4>Percentage of Pizzerias That Offer Delivery</h4>
+                    <p>{{percentDelivery}}%</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-5 col-lg-offset-1">
+            <div class="system-data">
+                <div>
+                    <h4>Percentage of Pizzerias That Serve Alcohol</h4>
+                    <p>{{percentAlcohol}}%</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-lg-5">
+            <div class="system-data">
+                <div>
+                    <h4>Percentage of Pizzerias That Have Gluten Free Options</h4>
+                    <p>{{percentGlutenFree}}%</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-5 col-lg-offset-1">
+            <div class="system-data">
+                <div>
+                    <h4>Percentage of Pizzerias That Have Vegan Options</h4>
+                    <p>{{percentVegan}}%</p>
+                </div>
+
+            </div>
+        </div>
+
 
         <div class="col-lg-5">
             <h2>Most Reviews</h2>

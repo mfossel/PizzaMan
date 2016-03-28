@@ -13,6 +13,23 @@
 
         });
 
+        UserDataResource.getUsersAvgNumReviews().then(function (response) {
+            $scope.usersAvgNumReviews = response;
+
+
+        });
+
+        UserDataResource.getUsersAvgNumPhotos().then(function (response) {
+            $scope.usersAvgNumPhotos = response;
+
+
+        });
+
+        UserDataResource.getUsers().then(function (response) {
+            $scope.users = response;
+
+
+        });
 
     }
 

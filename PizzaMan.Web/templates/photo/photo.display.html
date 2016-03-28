@@ -1,0 +1,22 @@
+﻿<link href="../../style/photo.css" rel="stylesheet" />
+<link href="../../bower_components/flexslider/flexslider.css" rel="stylesheet" />
+
+<div class="container">
+
+
+    <div class="col-xs-12">
+        <div class="box">
+            <div class="info">
+                <h4 class="text-center">Recently Added Photos</h4>
+                <div style="margin-top:45px;">
+                    <flex-slider flex-slide="s in mySlides" min-items="2" max-items="2" mousewheel="true" item-width="100px" slideshow="false">
+                        <li>
+                            <img id="flex-photo" ng-src="{{s}}">
+                        </li>
+                    </flex-slider>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

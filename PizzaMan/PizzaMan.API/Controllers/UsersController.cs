@@ -143,10 +143,28 @@ namespace PizzaMan.API.Controllers
             return Mapper.Map<IEnumerable<UserModel>>(mostPhotos);
         }
 
+        // GET: api/Users/AverageNumberOfPhotos
+        [Route("api/users/avgnumberofphotos")]
+        public double GetAverageNumberPhotos()
+        {
+            double avg = _userRepository.GetAll().Select(u => u.NumberOfPhotos).Average();
+            return avg;
+        }
 
+        // GET: api/Users/AverageNumberofReviews
+        [Route("api/users/avgnumberofreviews")]
+        public double GetAverageNumberReviews()
+        {
+            double avg = _userRepository.GetAll().Select(u => u.NumberOfReviews).Average();
+            return avg;
+        }
 
-
-
+        // GET: api/UsersAll
+        [Route("api/users/all")]
+        public IEnumerable<UserModel> GetAllUsers()
+        {
+            return Mapper.Map<IEnumerable<UserModel>>(_userRepository.GetAll());
+        }
 
         //Get: Count
         [Route("api/users/count")]

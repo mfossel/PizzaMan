@@ -24,7 +24,8 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider, $http
           .state('home.review', { url: '/review', parent: 'home', templateUrl: '/templates/review/review.html', controller: 'HomeController' })
                  .state('home.review.pizzeria', { url: '/review/pizzeria=:id', parent: 'home', secure: 'true', templateUrl: '/templates/review/review.pizzeria.html', controller: 'ReviewController' })
                  .state('home.review.display', { url: '/review/display=:id', parent: 'home', secure: 'true', templateUrl: '/templates/review/review.display.html', controller: 'ReviewDisplayController' })
-          .state('home.photo', { url: '/photo/id=:id', parent: 'home', templateUrl: '/templates/photo/photo.html', controller: 'PhotoController' })
+          .state('home.photo', { url: '/photo/id=:id', parent: 'home', secure: 'true', templateUrl: '/templates/photo/photo.html', controller: 'PhotoController' })
+          .state('home.photo.display', { url: '/photo', parent: 'home', templateUrl: '/templates/photo/photo.display.html', controller: 'PhotoDisplayController' })
     ;
 });
 

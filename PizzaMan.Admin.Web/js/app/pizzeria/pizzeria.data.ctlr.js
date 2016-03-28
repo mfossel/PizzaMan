@@ -39,6 +39,44 @@
 
         });
 
+
+        PizzeriaDataResource.getAvgNumReviews().then(function (response) {
+            $scope.avgNumReviews = response;
+
+
+        });
+
+
+        PizzeriaDataResource.getAvgRating().then(function (response) {
+            $scope.avgRating = response;
+
+
+        });
+
+        PizzeriaDataResource.getPercentDelivery().then(function (response) {
+            $scope.percentDelivery = response;
+
+
+        });
+
+        PizzeriaDataResource.getPercentAlcohol().then(function (response) {
+            $scope.percentAlcohol = response;
+
+
+        });
+
+        PizzeriaDataResource.getPercentVegan().then(function (response) {
+            $scope.percentVegan = response;
+
+
+        });
+
+        PizzeriaDataResource.getPercentGlutenFree().then(function (response) {
+            $scope.percentGlutenFree = response;
+
+
+        });
+
     }
 
     activate();

@@ -213,6 +213,81 @@ namespace PizzaMan.API.Controllers
             return Mapper.Map<IEnumerable<PizzeriaModel>>(highestRatedGlutenFree);
         }
 
+        // GET: api/Pizzerias/AverageNumberOfReviews
+        [Route("api/pizzerias/avgnumberofreviews")]
+        public double GetAverageNumberPhotos()
+        {
+            double avg = _pizzeriaRepository.GetAll().Select(u => u.NumberOfReviews).Average();
+            return avg;
+        }
+
+        // GET: api/Pizzerias/AverageOverallRating
+        [Route("api/pizzerias/avgoverallrating")]
+        public double GetAverageOverallRating()
+        {
+            double avg = _pizzeriaRepository.GetAll().Select(u => u.AverageRating).Average();
+            return avg;
+        }
+
+
+        // GET: api/Pizzerias/PercentOfferingDelivery
+        [Route("api/pizzerias/percentdelivery")]
+        public int GetPercentDelivery()
+        {
+            decimal del = _pizzeriaRepository.GetWhere(p => p.Delivery == true).Count();
+            decimal count = _pizzeriaRepository.Count();
+
+            decimal percentDec = del / count;
+
+            int percent = (int)(percentDec * 100);
+
+            return percent;
+        }
+
+        // GET: api/Pizzerias/PercentServingAlcohol
+        [Route("api/pizzerias/percentalcohol")]
+        public int GetPercentAlcohol()
+        {
+            decimal del = _pizzeriaRepository.GetWhere(p => p.Alcohol == true).Count();
+            decimal count = _pizzeriaRepository.Count();
+
+            decimal percentDec = del / count;
+
+            int percent = (int)(percentDec * 100);
+
+            return percent;
+        }
+
+        // GET: api/Pizzerias/PercentVegan
+        [Route("api/pizzerias/percentvegan")]
+        public int GetPercentVegan()
+        {
+            decimal del = _pizzeriaRepository.GetWhere(p => p.VeganOption == true).Count();
+            decimal count = _pizzeriaRepository.Count();
+
+            decimal percentDec = del / count;
+
+            int percent = (int)(percentDec * 100);
+
+            return percent;
+        }
+
+        // GET: api/Pizzerias/GlutenFree
+        [Route("api/pizzerias/percentglutenfree")]
+        public int GetPercentGlutenFree()
+        {
+            decimal del = _pizzeriaRepository.GetWhere(p => p.GlutenFreeOption == true).Count();
+            decimal count = _pizzeriaRepository.Count();
+
+            decimal percentDec = del / count;
+
+            int percent = (int)(percentDec * 100);
+
+            return percent;
+        }
+
+
+
         //Get: Count
         [Route("api/pizzerias/count")]
         public int GetPizzeriasCount()

@@ -73,7 +73,7 @@ namespace PizzaMan.API.Controllers
                     PizzeriaId = pizzeriaId,
                     UserId = CurrentUser.Id,
 
-                    // PhotoUrl = ?? How to set this ??
+                
 
                 });
             }
