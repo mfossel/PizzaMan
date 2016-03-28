@@ -223,9 +223,9 @@ namespace PizzaMan.API.Controllers
 
         // GET: api/Pizzerias/AverageOverallRating
         [Route("api/pizzerias/avgoverallrating")]
-        public double GetAverageOverallRating()
+        public float GetAverageOverallRating()
         {
-            double avg = _pizzeriaRepository.GetAll().Select(u => u.AverageRating).Average();
+            float avg = _pizzeriaRepository.GetAll().Select(u => u.AverageRating).Average();
             return avg;
         }
 

@@ -67,15 +67,7 @@ namespace PizzaMan.API.Controllers
             {
                 MultipartStreamProvider provider = new BlobStorageMultipartStreamProvider();
                 await Request.Content.ReadAsMultipartAsync(provider);
-
-                _photoRepository.Add(new Core.Domain.Photo
-                {
-                    PizzeriaId = pizzeriaId,
-                    UserId = CurrentUser.Id,
-
-                
-
-                });
+          
             }
 
             catch (Exception)
