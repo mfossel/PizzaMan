@@ -17,6 +17,11 @@
 
         });
 
+        DashboardResource.getMostRecentPhoto().then(function (response) {
+            $scope.recentPhoto = response;
+
+        });
+
 
     }
 

@@ -1,9 +1,14 @@
-﻿angular.module('app').factory('PhotoResource', function (apiUrl, $resource) {
-    return $resource(apiUrl + 'photos/:photoId', { submissionId: '@PhotoId' },
-    {
-        'update': {
-            method: 'PUT'
-        }
-    });
+﻿angular.module('app').factory('PhotoResource', function (apiUrl, $http) {
+    function getRecentPhotos() {
+        return $http.get(apiUrl + 'photos/mostrecents')
+                    .then(function (response) {
+                        return response.data;
+                    });
+    }
+
+    return {
+        getRecentPhotos: getRecentPhotos
+    };
 
 });
+

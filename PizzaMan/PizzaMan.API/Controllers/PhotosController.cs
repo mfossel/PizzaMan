@@ -34,15 +34,19 @@ namespace PizzaMan.API.Controllers
         }
 
         // GET: api/Photos/mostrecent
+        [Route("api/photos/mostrecent")]
         public PhotoModel GetPhotoRecent()
         {
-            return Mapper.Map<PhotoModel>(_photoRepository.GetAll().OrderBy(p => p.PhotoId).Take(1));
+            var mostRecent = _photoRepository.GetAll().OrderByDescending(p => p.PhotoId).FirstOrDefault();
+
+            return Mapper.Map<PhotoModel>(mostRecent);
         }
 
         // GET: api/Photos/mostrecents
+        [Route("api/photos/mostrecents")]
         public IEnumerable<PhotoModel> GetPhotosRecent()
         {
-            return Mapper.Map<IEnumerable<PhotoModel>>(_photoRepository.GetAll().OrderBy(p => p.PhotoId).Take(10));
+            return Mapper.Map<IEnumerable<PhotoModel>>(_photoRepository.GetAll().OrderByDescending(p => p.PhotoId).Take(10));
         }
 
         // GET: api/Photos/5

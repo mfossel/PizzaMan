@@ -9,4 +9,15 @@
         toastr.success('Photo successfully uploaded!');
     };
 
+
+    function activate() {
+        PhotoResource.getRecentPhotos().then(function (response) {
+            $scope.recentPhotos = response;
+        });
+
+    }
+
+    activate();
+
+
 });

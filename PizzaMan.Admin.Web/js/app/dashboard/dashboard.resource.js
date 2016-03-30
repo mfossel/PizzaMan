@@ -27,11 +27,20 @@
                     });
     }
 
+    function getMostRecentPhoto() {
+        return $http.get(apiUrl + 'photos/mostrecent')
+                    .then(function (response) {
+                        return response.data;
+                    });
+    }
+
+
     return {
         getPizzeriasCount: getPizzeriasCount,
         getPhotosCount: getPhotosCount,
         getReviewsCount: getReviewsCount,
-        getUsersCount: getUsersCount
+        getUsersCount: getUsersCount,
+        getMostRecentPhoto: getMostRecentPhoto
     };
 
 });
