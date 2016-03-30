@@ -5,7 +5,7 @@
         });
 
         DashboardResource.getPhotosCount().then(function (response) {
-                $scope.photossCount = response;
+                $scope.photosCount = response;
         });
             
         DashboardResource.getUsersCount().then(function (response) {

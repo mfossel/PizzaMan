@@ -33,6 +33,18 @@ namespace PizzaMan.API.Controllers
             return Mapper.Map<IEnumerable<PhotoModel>>(_photoRepository.GetAll());
         }
 
+        // GET: api/Photos/mostrecent
+        public PhotoModel GetPhotoRecent()
+        {
+            return Mapper.Map<PhotoModel>(_photoRepository.GetAll().OrderBy(p => p.PhotoId).Take(1));
+        }
+
+        // GET: api/Photos/mostrecents
+        public IEnumerable<PhotoModel> GetPhotosRecent()
+        {
+            return Mapper.Map<IEnumerable<PhotoModel>>(_photoRepository.GetAll().OrderBy(p => p.PhotoId).Take(10));
+        }
+
         // GET: api/Photos/5
         [ResponseType(typeof(Photo))]
         public IHttpActionResult GetPhoto(int id)

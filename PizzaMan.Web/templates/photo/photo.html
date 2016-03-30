@@ -16,9 +16,9 @@
                 </div>
 
                 <div style="margin-top:25px;">
-                    <flex-slider flex-slide="s in mySlides" min-items="2" max-items="2" mousewheel="true" item-width="100px" slideshow="false">
+                    <flex-slider flex-slide="photo in pizzeria.Photos track by photo.PhotoId" min-items="2" max-items="2" mousewheel="true" item-width="100px" slideshow="false">
                         <li>
-                            <img id ="flex-photo" ng-src="{{s}}">
+                            <img id ="flex-photo" ng-src="{{photo.PhotoURL}}">
                         </li>
                     </flex-slider>
                 </div>

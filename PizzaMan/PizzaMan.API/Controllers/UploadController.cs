@@ -35,10 +35,12 @@ namespace PizzaMan.API.Controllers
 
                     CloudBlockBlob blob = blobContainer.GetBlockBlobReference(contentDisposition.FileName);
                     stream = blob.OpenWrite();
+ 
                 }
             }
             return stream;
         }
+
     }
 
     public class ImageUploadController : BaseApiController
@@ -66,8 +68,24 @@ namespace PizzaMan.API.Controllers
             try
             {
                 MultipartStreamProvider provider = new BlobStorageMultipartStreamProvider();
+
+                
                 await Request.Content.ReadAsMultipartAsync(provider);
-          
+
+                string containerURI = ConfigurationManager.AppSettings["ContainerURI"];
+
+                var filename = provider.Contents[0].Headers.ContentDisposition.FileName;
+
+
+                var photo = new Core.Domain.Photo();
+
+                photo.PizzeriaId = pizzeriaId;
+                photo.PhotoURL = containerURI + filename;
+                photo.User = CurrentUser;
+                _photoRepository.Add(photo);
+                _unitOfWork.Commit();
+
+
             }
 
             catch (Exception)
@@ -75,10 +93,19 @@ namespace PizzaMan.API.Controllers
                 throw new HttpResponseException(HttpStatusCode.InternalServerError);
             }
 
+                  
+
+        
+
+
+
             return new HttpResponseMessage(HttpStatusCode.OK);
         }
     }
 
-}
+
+
+   
+    }
 
 

@@ -28,5 +28,7 @@ namespace PizzaMan.Core.Models
         public bool VeganOption { get; set; }
         public float AverageRating { get; set; }
         public int NumberOfReviews { get; set; }
+
+        public virtual ICollection<PhotoModel> Photos {get; set;}
     }
 }

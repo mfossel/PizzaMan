@@ -7,7 +7,9 @@
             headers: { 'Content-Type': undefined }
         })
         .success(function () {
-            toastr.success('Photo successfully uploaded!');
+            
+            location.reload();
+            
         })
         .error(function () {
             toastr.error('Error uploading')

@@ -11,14 +11,13 @@
             <table class="table-hover">
                 <thead>
                     <tr>
-                        <th style="font-size:large; padding:5px">Pizzeria Name</th>
-                        <th style="font-size:large; padding:5px">Phone Number</th>
-                        <th style="font-size:large; padding:5px">Delivery?</th>
-                        <th style="font-size:large; padding:5px">Sitdown?</th>
-                        <th style="font-size:large; padding:5px">Vegan options?</th>
-                        <th style="font-size:large; padding:5px">Gluten Free options?</th>
-                        <th style="font-size:large; padding:5px">Average Rating</th>
-                        <th></th>
+                        <th style="font-size:large; padding:5px; width:15%;">Pizzeria Name</th>
+                        <th style="font-size:large; padding:5px; width:15%">Phone Number</th>
+                        <th style="font-size:large; padding:5px; width:12%">Delivery?</th>
+                        <th style="font-size:large; padding:5px; width:12%">Sitdown?</th>
+                        <th style="font-size:large; padding:5px; width:12%">Vegan?</th>
+                        <th style="font-size:large; padding:5px; width:15%">Gluten Free?</th>
+                        <th style="font-size:large; padding:5px;width:18%;">Average Rating</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -47,7 +46,7 @@
                             </span>
                         </td>
 
-                        <td style="padding:5px">
+                        <td style="padding:5px; width:18%;">
                             <div class="info" id="pizzeriaStars">
                                 <input-stars max="5" ng-model="pizzeria.AverageRating" readonly="true"></input-stars>
                             </div>
