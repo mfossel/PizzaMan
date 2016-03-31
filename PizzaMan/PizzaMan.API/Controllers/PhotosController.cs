@@ -16,7 +16,7 @@ using PizzaMan.API.Infrastructure;
 
 namespace PizzaMan.API.Controllers
 {
-     [Authorize]
+
     public class PhotosController : BaseApiController
     {
         private readonly IPhotoRepository _photoRepository;

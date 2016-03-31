@@ -21,11 +21,11 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider, $http
                 .state('home.find.city', { url: '/find/city=:city', parent: 'home', templateUrl: '/templates/find/find.city.html', controller: 'FindCityController' })
                 .state('home.find.name', { url: '/find/name=:name', parent: 'home', templateUrl: '/templates/find/find.results.html', controller: 'FindNameController' })
           .state('home.pizzeria', { url: '/pizzeria', parent: 'home', templateUrl: '/templates/pizzeria/pizzeria.html', controller: 'PizzeriaController' })
-          .state('home.review', { url: '/review', parent: 'home', templateUrl: '/templates/review/review.html', controller: 'HomeController' })
+          .state('home.review', { url: '/review', parent: 'home', secure: 'true', templateUrl: '/templates/review/review.html', controller: 'HomeController' })
                  .state('home.review.pizzeria', { url: '/review/pizzeria=:id', parent: 'home', secure: 'true', templateUrl: '/templates/review/review.pizzeria.html', controller: 'ReviewController' })
                  .state('home.review.display', { url: '/review/display=:id', parent: 'home', secure: 'true', templateUrl: '/templates/review/review.display.html', controller: 'ReviewDisplayController' })
           .state('home.photo', { url: '/photo/id=:id', parent: 'home', secure: 'true', templateUrl: '/templates/photo/photo.html', controller: 'PhotoController' })
-          .state('home.photo.display', { url: '/photo', parent: 'home', templateUrl: '/templates/photo/photo.display.html', controller: 'PhotoController' })
+          .state('home.photo.display', { url: '/photo', parent: 'home', secure: 'false', templateUrl: '/templates/photo/photo.display.html', controller: 'PhotoController' })
     ;
 });
 
