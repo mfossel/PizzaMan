@@ -5,4 +5,7 @@ Yelp for Pizza Lovers
 
 
 
-### [DEMO](http://pizzamanweb.azurewebsites.net/)
+### [PizzaMan](http://pizzamanweb.azurewebsites.net/)
+
+[Demo for Origin Code Academy](https://www.youtube.com/watch?v=ehTs1X37PQg&feature=youtu.be)
+
