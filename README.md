@@ -2,7 +2,7 @@
 ###Pizza Man Web App
 
 Yelp for Pizza Lovers
-
+Built with C#/.NET and Bootstrap/AngularJS
 
 
 ### [PizzaMan](http://pizzamanweb.azurewebsites.net/)
