@@ -1,0 +1,14 @@
+C:\dev\origin\PizzaMan\PizzaMan\PizzaMan.DATA\bin\Release\PizzaMan.DATA.dll.config
+C:\dev\origin\PizzaMan\PizzaMan\PizzaMan.DATA\bin\Release\PizzaMan.DATA.dll
+C:\dev\origin\PizzaMan\PizzaMan\PizzaMan.DATA\bin\Release\PizzaMan.DATA.pdb
+C:\dev\origin\PizzaMan\PizzaMan\PizzaMan.DATA\bin\Release\EntityFramework.dll
+C:\dev\origin\PizzaMan\PizzaMan\PizzaMan.DATA\bin\Release\EntityFramework.SqlServer.dll
+C:\dev\origin\PizzaMan\PizzaMan\PizzaMan.DATA\bin\Release\Microsoft.AspNet.Identity.Core.dll
+C:\dev\origin\PizzaMan\PizzaMan\PizzaMan.DATA\bin\Release\PizzaMan.Core.dll
+C:\dev\origin\PizzaMan\PizzaMan\PizzaMan.DATA\bin\Release\PizzaMan.Core.pdb
+C:\dev\origin\PizzaMan\PizzaMan\PizzaMan.DATA\bin\Release\EntityFramework.xml
+C:\dev\origin\PizzaMan\PizzaMan\PizzaMan.DATA\bin\Release\EntityFramework.SqlServer.xml
+C:\dev\origin\PizzaMan\PizzaMan\PizzaMan.DATA\bin\Release\Microsoft.AspNet.Identity.Core.xml
+C:\dev\origin\PizzaMan\PizzaMan\PizzaMan.DATA\obj\Release\PizzaMan.Data.csprojResolveAssemblyReference.cache
+C:\dev\origin\PizzaMan\PizzaMan\PizzaMan.DATA\obj\Release\PizzaMan.DATA.dll
+C:\dev\origin\PizzaMan\PizzaMan\PizzaMan.DATA\obj\Release\PizzaMan.DATA.pdb

@@ -60,27 +60,6 @@
     <Compile Include="Infrastructure\Repository.cs" />
     <Compile Include="Infrastructure\UnitOfWork.cs" />
     <Compile Include="Infrastructure\UserStore.cs" />
-    <Compile Include="Migrations\201603162051023_initial.cs" />
-    <Compile Include="Migrations\201603162051023_initial.Designer.cs">
-      <DependentUpon>201603162051023_initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201603162315363_second.cs" />
-    <Compile Include="Migrations\201603162315363_second.Designer.cs">
-      <DependentUpon>201603162315363_second.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201603181909014_second1.cs" />
-    <Compile Include="Migrations\201603181909014_second1.Designer.cs">
-      <DependentUpon>201603181909014_second1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201603232119207_update3.cs" />
-    <Compile Include="Migrations\201603232119207_update3.Designer.cs">
-      <DependentUpon>201603232119207_update3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201603251812206_removedlikes.cs" />
-    <Compile Include="Migrations\201603251812206_removedlikes.Designer.cs">
-      <DependentUpon>201603251812206_removedlikes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\AspectRatingRepository.cs" />
     <Compile Include="Repository\AspectRepository.cs" />
@@ -98,23 +77,6 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201603162051023_initial.resx">
-      <DependentUpon>201603162051023_initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201603162315363_second.resx">
-      <DependentUpon>201603162315363_second.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201603181909014_second1.resx">
-      <DependentUpon>201603181909014_second1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201603232119207_update3.resx">
-      <DependentUpon>201603232119207_update3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201603251812206_removedlikes.resx">
-      <DependentUpon>201603251812206_removedlikes.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

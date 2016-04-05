@@ -3,7 +3,7 @@
         filepickerProvider.setKey('AXVtkjb3R6WdcNBUmkN2Tz');
 });;
 
-angular.module('app').value('apiUrl', 'http://localhost:49834/api/');
+angular.module('app').value('apiUrl', 'http://pizzamanapi.azurewebsites.net/api/');
 
 angular.module('app').config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
     $httpProvider.interceptors.push('AuthenticationInterceptor');

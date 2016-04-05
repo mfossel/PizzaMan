@@ -8,7 +8,7 @@
         </div>
 
         <div>
-            <flex-slider flex-slide="photo in pizzeria.Photos track by photo.PhotoId" min-items="2" max-items="2" mousewheel="true" item-width="100px" slideshow="false">
+            <flex-slider flex-slide="photo in pizzeria.Photos track by photo.PhotoId" min-items="2" max-items="5" mousewheel="true" item-width="100px" slideshow="false">
                 <li>
                     <img id="flex-photo" ng-src="{{photo.PhotoURL}}">
                 </li>
@@ -52,14 +52,14 @@
 
         <div style="padding-bottom:15px;">
             <p class="pizzeriaHeader">Menu URL</p>
-            <p class="pizzeriaParagraph">{{pizzeria.MenuURL}}</p>
+            <p class="pizzeriaParagraph"><a href="{{pizzeria.MenuURL}}">{{pizzeria.PizzeriaName}}</a></p>
         </div>
 
         <div style="padding-bottom:15px;">
             <p class="pizzeriaHeader">Offers Takeout?</p>
             <p class="pizzeriaParagraph">
                 <span ng-show="{{pizzeria.Takeout}}">Yes</span>
-                <span ng-hide="{{pizzeria.Delivery}}">No</span>
+                <span ng-hide="{{pizzeria.Takeout}}">No</span>
             </p>
         </div>
 
@@ -83,7 +83,7 @@
             <p class="pizzeriaHeader">Serves Alcohol?</p>
             <p class="pizzeriaParagraph">
                 <span ng-show="{{pizzeria.Alcohol}}">Yes</span>
-                <span ng-hide"{{pizzeria.Alcohol}}">No</span>
+                <span ng-hide="{{pizzeria.Alcohol}}">No</span>
             </p>
         </div>
 
@@ -91,7 +91,7 @@
             <p class="pizzeriaHeader">Offers Gluten-free Crust?</p>
             <p class="pizzeriaParagraph">
                 <span ng-show="{{pizzeria.GlutenFreeOption}}">Yes</span>
-                <span ng-hide"{{pizzeria.GlutenFreeOption}}">No</span>
+                <span ng-hide="{{pizzeria.GlutenFreeOption}}">No</span>
             </p>
         </div>
 
@@ -99,7 +99,7 @@
             <p class="pizzeriaHeader">Offers Vegan Options?</p>
             <p class="pizzeriaParagraph">
                 <span ng-show="{{pizzeria.VeganOption}}">Yes</span>
-                <span ng-hide"{{pizzeria.VeganOption}}">No</span>
+                <span ng-hide="{{pizzeria.VeganOption}}">No</span>
             </p>
         </div>
 
