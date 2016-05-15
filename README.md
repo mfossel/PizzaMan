@@ -3,7 +3,9 @@
 
 Yelp for Pizza Lovers
 
-Built with C#/.NET and Bootstrap/AngularJS
+Backend: C#, Entity Framework, SQL Server
+
+Frontend: Angular and Bootstrap
 
 
 ## [PizzaMan](http://pizzamanweb.azurewebsites.net/)
